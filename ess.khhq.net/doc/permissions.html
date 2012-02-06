@@ -1,0 +1,2168 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>ESS Command Wiki</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link href="assets/css/ess1/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="assets/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main" role="main">
+    			<h1>This is the permissions page</h1>
+<a href="index.html" class="button switch-view">View Commands Only</a><table id="permissions" class="datatable">
+	<thead>
+		<tr>
+			<th>PID</th>
+			<th>TID</th>
+			<th>Cat</th>
+			<th>Command</th>
+			<th>Perm</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+				<tr>
+			<td>1</td>
+			<td>1</td>
+			<td id="cmd-1-cat">General</td>
+			<td id="cmd-1-trigger">help</td>
+			<td id="perm-1-perm">essentials.help</td>
+			<td id="perm-1-pdesc">Allow access to the /help command.</td>
+		</tr>
+				<tr>
+			<td>215</td>
+			<td>1</td>
+			<td id="cmd-1-cat">General</td>
+			<td id="cmd-1-trigger">help</td>
+			<td id="perm-215-perm">essentials.help.[pluginname]</td>
+			<td id="perm-215-pdesc">Manually adds the commands from a plugin to this group's /help.  Name is all lowercase.</td>
+		</tr>
+				<tr>
+			<td>2</td>
+			<td>2</td>
+			<td id="cmd-2-cat">General</td>
+			<td id="cmd-2-trigger">depth</td>
+			<td id="perm-2-perm">essentials.depth</td>
+			<td id="perm-2-pdesc">Allow access to the /depth command.</td>
+		</tr>
+				<tr>
+			<td>3</td>
+			<td>3</td>
+			<td id="cmd-3-cat">General</td>
+			<td id="cmd-3-trigger">getpos</td>
+			<td id="perm-3-perm">essentials.getpos</td>
+			<td id="perm-3-pdesc">Allow access to the /getpos command.</td>
+		</tr>
+				<tr>
+			<td>4</td>
+			<td>4</td>
+			<td id="cmd-4-cat">General</td>
+			<td id="cmd-4-trigger">compass</td>
+			<td id="perm-4-perm">essentials.compass</td>
+			<td id="perm-4-pdesc">Allow access to the /compass command.</td>
+		</tr>
+				<tr>
+			<td>5</td>
+			<td>5</td>
+			<td id="cmd-5-cat">Teleport</td>
+			<td id="cmd-5-trigger">top</td>
+			<td id="perm-5-perm">essentials.top</td>
+			<td id="perm-5-pdesc">Allow access to the /top command.</td>
+		</tr>
+				<tr>
+			<td>6</td>
+			<td>6</td>
+			<td id="cmd-6-cat">Teleport</td>
+			<td id="cmd-6-trigger">jump</td>
+			<td id="perm-6-perm">essentials.jump</td>
+			<td id="perm-6-pdesc">Allow access to the /jump command.</td>
+		</tr>
+				<tr>
+			<td>7</td>
+			<td>7</td>
+			<td id="cmd-7-cat">Teleport</td>
+			<td id="cmd-7-trigger">back</td>
+			<td id="perm-7-perm">essentials.back</td>
+			<td id="perm-7-pdesc">Allow access to the /back command.</td>
+		</tr>
+				<tr>
+			<td>84</td>
+			<td>7</td>
+			<td id="cmd-7-cat">Teleport</td>
+			<td id="cmd-7-trigger">back</td>
+			<td id="perm-84-perm">essentials.back.ondeath</td>
+			<td id="perm-84-pdesc">Give this permission to allow players to use /back to go to their death spot</td>
+		</tr>
+				<tr>
+			<td>8</td>
+			<td>8</td>
+			<td id="cmd-8-cat">Teleport</td>
+			<td id="cmd-8-trigger">world</td>
+			<td id="perm-8-perm">essentials.world</td>
+			<td id="perm-8-pdesc">Allow access to the /world command.</td>
+		</tr>
+				<tr>
+			<td>257</td>
+			<td>8</td>
+			<td id="cmd-8-cat">Teleport</td>
+			<td id="cmd-8-trigger">world</td>
+			<td id="perm-257-perm">essentials.world.&lt;worldname&gt;</td>
+			<td id="perm-257-pdesc">Allows players access to a specific world.</td>
+		</tr>
+				<tr>
+			<td>9</td>
+			<td>9</td>
+			<td id="cmd-9-cat">Teleport</td>
+			<td id="cmd-9-trigger">tptoggle</td>
+			<td id="perm-9-perm">essentials.tptoggle</td>
+			<td id="perm-9-pdesc">Allow access to the /tptoggle command.</td>
+		</tr>
+				<tr>
+			<td>86</td>
+			<td>9</td>
+			<td id="cmd-9-cat">Teleport</td>
+			<td id="cmd-9-trigger">tptoggle</td>
+			<td id="perm-86-perm">essentials.teleport.timer.bypass</td>
+			<td id="perm-86-pdesc">Bypass the teleport delay</td>
+		</tr>
+				<tr>
+			<td>87</td>
+			<td>9</td>
+			<td id="cmd-9-cat">Teleport</td>
+			<td id="cmd-9-trigger">tptoggle</td>
+			<td id="perm-87-perm">essentials.teleport.cooldown.bypass</td>
+			<td id="perm-87-pdesc">Bypass the teleport cooldown</td>
+		</tr>
+				<tr>
+			<td>212</td>
+			<td>9</td>
+			<td id="cmd-9-cat">Teleport</td>
+			<td id="cmd-9-trigger">tptoggle</td>
+			<td id="perm-212-perm">essentials.teleport.hidden</td>
+			<td id="perm-212-pdesc">Allows the user to teleport to players who are hidden by another plugin.  This permission only affects tpo and tpohere.</td>
+		</tr>
+				<tr>
+			<td>10</td>
+			<td>10</td>
+			<td id="cmd-10-cat">Teleport</td>
+			<td id="cmd-10-trigger">tpa</td>
+			<td id="perm-10-perm">essentials.tpa</td>
+			<td id="perm-10-pdesc">Allow access to the /tpa command.</td>
+		</tr>
+				<tr>
+			<td>11</td>
+			<td>11</td>
+			<td id="cmd-11-cat">Teleport</td>
+			<td id="cmd-11-trigger">tp</td>
+			<td id="perm-11-perm">essentials.tp</td>
+			<td id="perm-11-pdesc">Allow access to the /tp command.</td>
+		</tr>
+				<tr>
+			<td>241</td>
+			<td>11</td>
+			<td id="cmd-11-cat">Teleport</td>
+			<td id="cmd-11-trigger">tp</td>
+			<td id="perm-241-perm">essentials.tpohere</td>
+			<td id="perm-241-pdesc">Allow players to teleport another player.</td>
+		</tr>
+				<tr>
+			<td>12</td>
+			<td>12</td>
+			<td id="cmd-12-cat">Teleport</td>
+			<td id="cmd-12-trigger">tpo</td>
+			<td id="perm-12-perm">essentials.tpo</td>
+			<td id="perm-12-pdesc">Allow access to the /tpo command.</td>
+		</tr>
+				<tr>
+			<td>252</td>
+			<td>12</td>
+			<td id="cmd-12-cat">Teleport</td>
+			<td id="cmd-12-trigger">tpo</td>
+			<td id="perm-252-perm">essentials.teleport.hidden</td>
+			<td id="perm-252-pdesc">Allows teleporting to a hidden player</td>
+		</tr>
+				<tr>
+			<td>13</td>
+			<td>13</td>
+			<td id="cmd-13-cat">Teleport</td>
+			<td id="cmd-13-trigger">tpahere</td>
+			<td id="perm-13-perm">essentials.tpahere</td>
+			<td id="perm-13-pdesc">Allow access to the /tpahere command.</td>
+		</tr>
+				<tr>
+			<td>14</td>
+			<td>14</td>
+			<td id="cmd-14-cat">Teleport</td>
+			<td id="cmd-14-trigger">tphere</td>
+			<td id="perm-14-perm">essentials.tphere</td>
+			<td id="perm-14-pdesc">Allow access to the /tphere command.</td>
+		</tr>
+				<tr>
+			<td>15</td>
+			<td>15</td>
+			<td id="cmd-15-cat">Teleport</td>
+			<td id="cmd-15-trigger">tpohere</td>
+			<td id="perm-15-perm">essentials.tpohere</td>
+			<td id="perm-15-pdesc">Allow access to the /tpohere command.</td>
+		</tr>
+				<tr>
+			<td>253</td>
+			<td>15</td>
+			<td id="cmd-15-cat">Teleport</td>
+			<td id="cmd-15-trigger">tpohere</td>
+			<td id="perm-253-perm">essentials.teleport.hidden</td>
+			<td id="perm-253-pdesc">Allows teleporting a hidden player</td>
+		</tr>
+				<tr>
+			<td>16</td>
+			<td>16</td>
+			<td id="cmd-16-cat">Teleport</td>
+			<td id="cmd-16-trigger">tppos</td>
+			<td id="perm-16-perm">essentials.tppos</td>
+			<td id="perm-16-pdesc">Allow access to the /tppos command.</td>
+		</tr>
+				<tr>
+			<td>17</td>
+			<td>17</td>
+			<td id="cmd-17-cat">Teleport</td>
+			<td id="cmd-17-trigger">tpall</td>
+			<td id="perm-17-perm">essentials.tpall</td>
+			<td id="perm-17-pdesc">Allow access to the /tpall command.</td>
+		</tr>
+				<tr>
+			<td>18</td>
+			<td>18</td>
+			<td id="cmd-18-cat">Teleport</td>
+			<td id="cmd-18-trigger">home</td>
+			<td id="perm-18-perm">essentials.home</td>
+			<td id="perm-18-pdesc">Allow access to the /home command.</td>
+		</tr>
+				<tr>
+			<td>88</td>
+			<td>18</td>
+			<td id="cmd-18-cat">Teleport</td>
+			<td id="cmd-18-trigger">home</td>
+			<td id="perm-88-perm">essentials.home.others</td>
+			<td id="perm-88-pdesc">Allows you to teleport to homes of other players</td>
+		</tr>
+				<tr>
+			<td>19</td>
+			<td>19</td>
+			<td id="cmd-19-cat">Teleport</td>
+			<td id="cmd-19-trigger">sethome</td>
+			<td id="perm-19-perm">essentials.sethome</td>
+			<td id="perm-19-pdesc">Allow access to the /sethome command.</td>
+		</tr>
+				<tr>
+			<td>191</td>
+			<td>19</td>
+			<td id="cmd-19-cat">Teleport</td>
+			<td id="cmd-19-trigger">sethome</td>
+			<td id="perm-191-perm">essentials.sethome.others</td>
+			<td id="perm-191-pdesc">Allows you to change another users home location.</td>
+		</tr>
+				<tr>
+			<td>218</td>
+			<td>19</td>
+			<td id="cmd-19-cat">Teleport</td>
+			<td id="cmd-19-trigger">sethome</td>
+			<td id="perm-218-perm">essentials.sethome.multiple</td>
+			<td id="perm-218-pdesc">Allows player to have multiple homes, or create named homes.  Required for 2+ homes.</td>
+		</tr>
+				<tr>
+			<td>219</td>
+			<td>19</td>
+			<td id="cmd-19-cat">Teleport</td>
+			<td id="cmd-19-trigger">sethome</td>
+			<td id="perm-219-perm">essentials.sethome.multiple.unlimited</td>
+			<td id="perm-219-pdesc">Removes the cap on the number of homes people are allowed (if they have multiple homes).</td>
+		</tr>
+				<tr>
+			<td>232</td>
+			<td>19</td>
+			<td id="cmd-19-cat">Teleport</td>
+			<td id="cmd-19-trigger">sethome</td>
+			<td id="perm-232-perm">essentials.sethome.multiple.[set]</td>
+			<td id="perm-232-pdesc">Raise the multiple home limit to a setting defined in the config file.</td>
+		</tr>
+				<tr>
+			<td>20</td>
+			<td>20</td>
+			<td id="cmd-20-cat">Teleport</td>
+			<td id="cmd-20-trigger">warp</td>
+			<td id="perm-20-perm">essentials.warp</td>
+			<td id="perm-20-pdesc">Allow access to the /warp command.</td>
+		</tr>
+				<tr>
+			<td>89</td>
+			<td>20</td>
+			<td id="cmd-20-cat">Teleport</td>
+			<td id="cmd-20-trigger">warp</td>
+			<td id="perm-89-perm">essentials.warp.list</td>
+			<td id="perm-89-pdesc">Specifies whether you can view warp list with /warp</td>
+		</tr>
+				<tr>
+			<td>90</td>
+			<td>20</td>
+			<td id="cmd-20-cat">Teleport</td>
+			<td id="cmd-20-trigger">warp</td>
+			<td id="perm-90-perm">essentials.warp.[warpname]</td>
+			<td id="perm-90-pdesc">If you have per-warp-permission set to true in the config.yml then you can limit what warps players can use. This also controls what players would see with /warp</td>
+		</tr>
+				<tr>
+			<td>91</td>
+			<td>20</td>
+			<td id="cmd-20-cat">Teleport</td>
+			<td id="cmd-20-trigger">warp</td>
+			<td id="perm-91-perm">essentials.warp.otherplayers</td>
+			<td id="perm-91-pdesc">Allows warping another player</td>
+		</tr>
+				<tr>
+			<td>251</td>
+			<td>20</td>
+			<td id="cmd-20-cat">Teleport</td>
+			<td id="cmd-20-trigger">warp</td>
+			<td id="perm-251-perm">essentials.warp.*</td>
+			<td id="perm-251-pdesc">Allows access to all warps</td>
+		</tr>
+				<tr>
+			<td>21</td>
+			<td>21</td>
+			<td id="cmd-21-cat">Teleport</td>
+			<td id="cmd-21-trigger">setwarp</td>
+			<td id="perm-21-perm">essentials.setwarp</td>
+			<td id="perm-21-pdesc">Allow access to the /setwarp command.</td>
+		</tr>
+				<tr>
+			<td>22</td>
+			<td>22</td>
+			<td id="cmd-22-cat">Teleport</td>
+			<td id="cmd-22-trigger">delwarp</td>
+			<td id="perm-22-perm">essentials.delwarp</td>
+			<td id="perm-22-pdesc">Allow access to the /delwarp command.</td>
+		</tr>
+				<tr>
+			<td>23</td>
+			<td>23</td>
+			<td id="cmd-23-cat">Economy</td>
+			<td id="cmd-23-trigger">eco</td>
+			<td id="perm-23-perm">essentials.eco</td>
+			<td id="perm-23-pdesc">Allow access to the /eco command.</td>
+		</tr>
+				<tr>
+			<td>151</td>
+			<td>23</td>
+			<td id="cmd-23-cat">Economy</td>
+			<td id="cmd-23-trigger">eco</td>
+			<td id="perm-151-perm">essentials.eco.loan</td>
+			<td id="perm-151-pdesc">Gives the player unlimited money.</td>
+		</tr>
+				<tr>
+			<td>24</td>
+			<td>24</td>
+			<td id="cmd-24-cat">Economy</td>
+			<td id="cmd-24-trigger">worth</td>
+			<td id="perm-24-perm">essentials.worth</td>
+			<td id="perm-24-pdesc">Allow access to the /worth command.</td>
+		</tr>
+				<tr>
+			<td>25</td>
+			<td>25</td>
+			<td id="cmd-25-cat">Economy</td>
+			<td id="cmd-25-trigger">setworth</td>
+			<td id="perm-25-perm">essentials.setworth</td>
+			<td id="perm-25-pdesc">Allow access to the /setworth command.</td>
+		</tr>
+				<tr>
+			<td>26</td>
+			<td>26</td>
+			<td id="cmd-26-cat">Economy</td>
+			<td id="cmd-26-trigger">sell</td>
+			<td id="perm-26-perm">essentials.sell</td>
+			<td id="perm-26-pdesc">Allow access to the /sell command.</td>
+		</tr>
+				<tr>
+			<td>27</td>
+			<td>27</td>
+			<td id="cmd-27-cat">Economy</td>
+			<td id="cmd-27-trigger">balance</td>
+			<td id="perm-27-perm">essentials.balance</td>
+			<td id="perm-27-pdesc">Allow access to the /balance command.</td>
+		</tr>
+				<tr>
+			<td>92</td>
+			<td>27</td>
+			<td id="cmd-27-cat">Economy</td>
+			<td id="cmd-27-trigger">balance</td>
+			<td id="perm-92-perm">essentials.balance.others</td>
+			<td id="perm-92-pdesc">Allows you to see the balance of other players</td>
+		</tr>
+				<tr>
+			<td>28</td>
+			<td>28</td>
+			<td id="cmd-28-cat">Economy</td>
+			<td id="cmd-28-trigger">pay</td>
+			<td id="perm-28-perm">essentials.pay</td>
+			<td id="perm-28-pdesc">Allow access to the /pay command.</td>
+		</tr>
+				<tr>
+			<td>29</td>
+			<td>29</td>
+			<td id="cmd-29-cat">General</td>
+			<td id="cmd-29-trigger">info</td>
+			<td id="perm-29-perm">essentials.info</td>
+			<td id="perm-29-pdesc">Allow access to the /info command.</td>
+		</tr>
+				<tr>
+			<td>30</td>
+			<td>30</td>
+			<td id="cmd-30-cat">General</td>
+			<td id="cmd-30-trigger">msg</td>
+			<td id="perm-30-perm">essentials.msg</td>
+			<td id="perm-30-pdesc">Allow access to the /msg command.</td>
+		</tr>
+				<tr>
+			<td>266</td>
+			<td>30</td>
+			<td id="cmd-30-cat">General</td>
+			<td id="cmd-30-trigger">msg</td>
+			<td id="perm-266-perm">essentials.msg.color</td>
+			<td id="perm-266-pdesc">Allows use of color in private messages.</td>
+		</tr>
+				<tr>
+			<td>31</td>
+			<td>31</td>
+			<td id="cmd-31-cat">General</td>
+			<td id="cmd-31-trigger">r</td>
+			<td id="perm-31-perm">essentials.msg</td>
+			<td id="perm-31-pdesc">Allow access to the /msg command.</td>
+		</tr>
+				<tr>
+			<td>267</td>
+			<td>31</td>
+			<td id="cmd-31-cat">General</td>
+			<td id="cmd-31-trigger">r</td>
+			<td id="perm-267-perm">essentials.msg.color</td>
+			<td id="perm-267-pdesc">Allows use of color in private messages.</td>
+		</tr>
+				<tr>
+			<td>32</td>
+			<td>32</td>
+			<td id="cmd-32-cat">General</td>
+			<td id="cmd-32-trigger">afk</td>
+			<td id="perm-32-perm">essentials.afk</td>
+			<td id="perm-32-pdesc">Allow access to the /afk command.</td>
+		</tr>
+				<tr>
+			<td>228</td>
+			<td>32</td>
+			<td id="cmd-32-cat">General</td>
+			<td id="cmd-32-trigger">afk</td>
+			<td id="perm-228-perm">essentials.afk.kickexempt</td>
+			<td id="perm-228-pdesc">Exempts the user from being auto kicked for AFK</td>
+		</tr>
+				<tr>
+			<td>244</td>
+			<td>32</td>
+			<td id="cmd-32-cat">General</td>
+			<td id="cmd-32-trigger">afk</td>
+			<td id="perm-244-perm">essentials.afk.others</td>
+			<td id="perm-244-pdesc">Allows you to AFK other players.</td>
+		</tr>
+				<tr>
+			<td>33</td>
+			<td>33</td>
+			<td id="cmd-33-cat">General</td>
+			<td id="cmd-33-trigger">rules</td>
+			<td id="perm-33-perm">essentials.rules</td>
+			<td id="perm-33-pdesc">Allow access to the /rules command.</td>
+		</tr>
+				<tr>
+			<td>34</td>
+			<td>34</td>
+			<td id="cmd-34-cat">General</td>
+			<td id="cmd-34-trigger">motd</td>
+			<td id="perm-34-perm">essentials.motd</td>
+			<td id="perm-34-pdesc">User sees MOTD on connect, and can use the command.</td>
+		</tr>
+				<tr>
+			<td>35</td>
+			<td>35</td>
+			<td id="cmd-35-cat">General</td>
+			<td id="cmd-35-trigger">me</td>
+			<td id="perm-35-perm">essentials.me</td>
+			<td id="perm-35-pdesc">Allow access to the /me command.</td>
+		</tr>
+				<tr>
+			<td>36</td>
+			<td>36</td>
+			<td id="cmd-36-cat">General</td>
+			<td id="cmd-36-trigger">list</td>
+			<td id="perm-36-perm">essentials.list</td>
+			<td id="perm-36-pdesc">Allow access to the /list command.</td>
+		</tr>
+				<tr>
+			<td>206</td>
+			<td>36</td>
+			<td id="cmd-36-cat">General</td>
+			<td id="cmd-36-trigger">list</td>
+			<td id="perm-206-perm">essentials.list.hidden</td>
+			<td id="perm-206-pdesc">Show hidden users</td>
+		</tr>
+				<tr>
+			<td>37</td>
+			<td>37</td>
+			<td id="cmd-37-cat">General</td>
+			<td id="cmd-37-trigger">mail</td>
+			<td id="perm-37-perm">essentials.mail</td>
+			<td id="perm-37-pdesc">Allow access to the /mail command.</td>
+		</tr>
+				<tr>
+			<td>93</td>
+			<td>37</td>
+			<td id="cmd-37-cat">General</td>
+			<td id="cmd-37-trigger">mail</td>
+			<td id="perm-93-perm">essentials.mail.send</td>
+			<td id="perm-93-pdesc">Send mail</td>
+		</tr>
+				<tr>
+			<td>38</td>
+			<td>38</td>
+			<td id="cmd-38-cat">General</td>
+			<td id="cmd-38-trigger">helpop</td>
+			<td id="perm-38-perm">essentials.helpop</td>
+			<td id="perm-38-pdesc">Allow access to the /helpop command.</td>
+		</tr>
+				<tr>
+			<td>94</td>
+			<td>38</td>
+			<td id="cmd-38-cat">General</td>
+			<td id="cmd-38-trigger">helpop</td>
+			<td id="perm-94-perm">essentials.helpop.receive</td>
+			<td id="perm-94-pdesc">Allows you to see Helpop messages</td>
+		</tr>
+				<tr>
+			<td>39</td>
+			<td>39</td>
+			<td id="cmd-39-cat">General</td>
+			<td id="cmd-39-trigger">whois</td>
+			<td id="perm-39-perm">essentials.whois</td>
+			<td id="perm-39-pdesc">Allow access to the /whois command.</td>
+		</tr>
+				<tr>
+			<td>254</td>
+			<td>39</td>
+			<td id="cmd-39-cat">General</td>
+			<td id="cmd-39-trigger">whois</td>
+			<td id="perm-254-perm">essentials.list.hidden</td>
+			<td id="perm-254-pdesc">Show hidden users</td>
+		</tr>
+				<tr>
+			<td>40</td>
+			<td>40</td>
+			<td id="cmd-40-cat">General</td>
+			<td id="cmd-40-trigger">nick</td>
+			<td id="perm-40-perm">essentials.nick</td>
+			<td id="perm-40-pdesc">Allow access to the /nick command.</td>
+		</tr>
+				<tr>
+			<td>95</td>
+			<td>40</td>
+			<td id="cmd-40-cat">General</td>
+			<td id="cmd-40-trigger">nick</td>
+			<td id="perm-95-perm">essentials.nick.others</td>
+			<td id="perm-95-pdesc">Gives you permission to give other players a nick name</td>
+		</tr>
+				<tr>
+			<td>248</td>
+			<td>40</td>
+			<td id="cmd-40-cat">General</td>
+			<td id="cmd-40-trigger">nick</td>
+			<td id="perm-248-perm">essentials.nick.color</td>
+			<td id="perm-248-pdesc">Allows use of color in nick names.</td>
+		</tr>
+				<tr>
+			<td>41</td>
+			<td>41</td>
+			<td id="cmd-41-cat">General</td>
+			<td id="cmd-41-trigger">realname</td>
+			<td id="perm-41-perm">essentials.realname</td>
+			<td id="perm-41-pdesc">Allow access to the /realname command.</td>
+		</tr>
+				<tr>
+			<td>42</td>
+			<td>42</td>
+			<td id="cmd-42-cat">General</td>
+			<td id="cmd-42-trigger">seen</td>
+			<td id="perm-42-perm">essentials.seen</td>
+			<td id="perm-42-pdesc">Allow access to the /seen command.</td>
+		</tr>
+				<tr>
+			<td>43</td>
+			<td>43</td>
+			<td id="cmd-43-cat">Moderator</td>
+			<td id="cmd-43-trigger">essentials</td>
+			<td id="perm-43-perm">essentials.essentials</td>
+			<td id="perm-43-pdesc">Allow access to the /essentials command.</td>
+		</tr>
+				<tr>
+			<td>239</td>
+			<td>109</td>
+			<td id="cmd-109-cat">General</td>
+			<td id="cmd-109-trigger">near</td>
+			<td id="perm-239-perm">essentials.near</td>
+			<td id="perm-239-pdesc">Allow access to the /near command.</td>
+		</tr>
+				<tr>
+			<td>45</td>
+			<td>45</td>
+			<td id="cmd-45-cat">Moderator</td>
+			<td id="cmd-45-trigger">gc</td>
+			<td id="perm-45-perm">essentials.gc</td>
+			<td id="perm-45-pdesc">Allow access to the /gc command.</td>
+		</tr>
+				<tr>
+			<td>210</td>
+			<td>102</td>
+			<td id="cmd-102-cat">Cheat</td>
+			<td id="cmd-102-trigger">ptime</td>
+			<td id="perm-210-perm">essentials.ptime</td>
+			<td id="perm-210-pdesc">Allow access to the /ptime command.</td>
+		</tr>
+				<tr>
+			<td>211</td>
+			<td>102</td>
+			<td id="cmd-102-cat">Cheat</td>
+			<td id="cmd-102-trigger">ptime</td>
+			<td id="perm-211-perm">essentials.ptime.others</td>
+			<td id="perm-211-pdesc">Allows you to change the time of another online player.</td>
+		</tr>
+				<tr>
+			<td>47</td>
+			<td>47</td>
+			<td id="cmd-47-cat">Moderator</td>
+			<td id="cmd-47-trigger">spawnmob</td>
+			<td id="perm-47-perm">essentials.spawnmob</td>
+			<td id="perm-47-pdesc">Allow access to the /spawnmob command.</td>
+		</tr>
+				<tr>
+			<td>237</td>
+			<td>47</td>
+			<td id="cmd-47-cat">Moderator</td>
+			<td id="cmd-47-trigger">spawnmob</td>
+			<td id="perm-237-perm">essentials.spawnmob.[mob]</td>
+			<td id="perm-237-pdesc">Allow access to spawn a specific mob</td>
+		</tr>
+				<tr>
+			<td>238</td>
+			<td>47</td>
+			<td id="cmd-47-cat">Moderator</td>
+			<td id="cmd-47-trigger">spawnmob</td>
+			<td id="perm-238-perm">essentials.spawnmob.*</td>
+			<td id="perm-238-pdesc">Allow the spawning of all mobs</td>
+		</tr>
+				<tr>
+			<td>48</td>
+			<td>48</td>
+			<td id="cmd-48-cat">Moderator</td>
+			<td id="cmd-48-trigger">clearinventory</td>
+			<td id="perm-48-perm">essentials.clearinventory</td>
+			<td id="perm-48-pdesc">Allow access to the /clearinventory command.</td>
+		</tr>
+				<tr>
+			<td>96</td>
+			<td>48</td>
+			<td id="cmd-48-cat">Moderator</td>
+			<td id="cmd-48-trigger">clearinventory</td>
+			<td id="perm-96-perm">essentials.clearinventory.others</td>
+			<td id="perm-96-pdesc">Allows you to clear other player's inventory</td>
+		</tr>
+				<tr>
+			<td>49</td>
+			<td>49</td>
+			<td id="cmd-49-cat">Moderator</td>
+			<td id="cmd-49-trigger">broadcast</td>
+			<td id="perm-49-perm">essentials.broadcast</td>
+			<td id="perm-49-pdesc">Allow access to the /broadcast command.</td>
+		</tr>
+				<tr>
+			<td>50</td>
+			<td>50</td>
+			<td id="cmd-50-cat">Moderator</td>
+			<td id="cmd-50-trigger">antioch</td>
+			<td id="perm-50-perm">essentials.antioch</td>
+			<td id="perm-50-pdesc">Allow access to the /antioch command.</td>
+		</tr>
+				<tr>
+			<td>51</td>
+			<td>51</td>
+			<td id="cmd-51-cat">Moderator</td>
+			<td id="cmd-51-trigger">burn</td>
+			<td id="perm-51-perm">essentials.burn</td>
+			<td id="perm-51-pdesc">Allow access to the /burn command.</td>
+		</tr>
+				<tr>
+			<td>52</td>
+			<td>52</td>
+			<td id="cmd-52-cat">Moderator</td>
+			<td id="cmd-52-trigger">ext</td>
+			<td id="perm-52-perm">essentials.ext</td>
+			<td id="perm-52-pdesc">Allow access to the /ext command.</td>
+		</tr>
+				<tr>
+			<td>53</td>
+			<td>53</td>
+			<td id="cmd-53-cat">Moderator</td>
+			<td id="cmd-53-trigger">kill</td>
+			<td id="perm-53-perm">essentials.kill</td>
+			<td id="perm-53-pdesc">Allow access to the /kill command.</td>
+		</tr>
+				<tr>
+			<td>247</td>
+			<td>53</td>
+			<td id="cmd-53-cat">Moderator</td>
+			<td id="cmd-53-trigger">kill</td>
+			<td id="perm-247-perm">essentials.kill.force</td>
+			<td id="perm-247-pdesc">Force player death, even if event is cancelled.</td>
+		</tr>
+				<tr>
+			<td>54</td>
+			<td>54</td>
+			<td id="cmd-54-cat">Moderator</td>
+			<td id="cmd-54-trigger">ping</td>
+			<td id="perm-54-perm">essentials.ping</td>
+			<td id="perm-54-pdesc">Allow access to the /ping command.</td>
+		</tr>
+				<tr>
+			<td>55</td>
+			<td>55</td>
+			<td id="cmd-55-cat">Moderator</td>
+			<td id="cmd-55-trigger">backup</td>
+			<td id="perm-55-perm">essentials.backup</td>
+			<td id="perm-55-pdesc">Allow access to the /backup command.</td>
+		</tr>
+				<tr>
+			<td>56</td>
+			<td>56</td>
+			<td id="cmd-56-cat">Moderator</td>
+			<td id="cmd-56-trigger">nuke</td>
+			<td id="perm-56-perm">essentials.nuke</td>
+			<td id="perm-56-pdesc">Allow access to the /nuke command.</td>
+		</tr>
+				<tr>
+			<td>57</td>
+			<td>57</td>
+			<td id="cmd-57-cat">Moderator</td>
+			<td id="cmd-57-trigger">ban</td>
+			<td id="perm-57-perm">essentials.ban</td>
+			<td id="perm-57-pdesc">Allow access to the /ban command.</td>
+		</tr>
+				<tr>
+			<td>204</td>
+			<td>57</td>
+			<td id="cmd-57-cat">Moderator</td>
+			<td id="cmd-57-trigger">ban</td>
+			<td id="perm-204-perm">essentials.ban.exempt</td>
+			<td id="perm-204-pdesc">Prevents a specified group or player from being banned</td>
+		</tr>
+				<tr>
+			<td>208</td>
+			<td>57</td>
+			<td id="cmd-57-cat">Moderator</td>
+			<td id="cmd-57-trigger">ban</td>
+			<td id="perm-208-perm">essentials.ban.notify</td>
+			<td id="perm-208-pdesc">User sees a notification when a ban is set.</td>
+		</tr>
+				<tr>
+			<td>221</td>
+			<td>57</td>
+			<td id="cmd-57-cat">Moderator</td>
+			<td id="cmd-57-trigger">ban</td>
+			<td id="perm-221-perm">essentials.ban.offline</td>
+			<td id="perm-221-pdesc">Allows banning of players who are offline.  This may allow you to ban exempt players.</td>
+		</tr>
+				<tr>
+			<td>58</td>
+			<td>58</td>
+			<td id="cmd-58-cat">Moderator</td>
+			<td id="cmd-58-trigger">tempban</td>
+			<td id="perm-58-perm">essentials.tempban</td>
+			<td id="perm-58-pdesc">Allow access to the /tempban command.</td>
+		</tr>
+				<tr>
+			<td>202</td>
+			<td>58</td>
+			<td id="cmd-58-cat">Moderator</td>
+			<td id="cmd-58-trigger">tempban</td>
+			<td id="perm-202-perm">essentials.tempban.exempt</td>
+			<td id="perm-202-pdesc">Prevents a specified group or player from being tempbanned</td>
+		</tr>
+				<tr>
+			<td>222</td>
+			<td>58</td>
+			<td id="cmd-58-cat">Moderator</td>
+			<td id="cmd-58-trigger">tempban</td>
+			<td id="perm-222-perm">essentials.tempban.offline</td>
+			<td id="perm-222-pdesc">Allows temp-banning of players who are offline.  This may allow you to ban exempt players.</td>
+		</tr>
+				<tr>
+			<td>59</td>
+			<td>59</td>
+			<td id="cmd-59-cat">Moderator</td>
+			<td id="cmd-59-trigger">banip</td>
+			<td id="perm-59-perm">essentials.banip</td>
+			<td id="perm-59-pdesc">Allow access to the /banip command.</td>
+		</tr>
+				<tr>
+			<td>60</td>
+			<td>60</td>
+			<td id="cmd-60-cat">Moderator</td>
+			<td id="cmd-60-trigger">mute</td>
+			<td id="perm-60-perm">essentials.mute</td>
+			<td id="perm-60-pdesc">Allow access to the /mute command.</td>
+		</tr>
+				<tr>
+			<td>200</td>
+			<td>60</td>
+			<td id="cmd-60-cat">Moderator</td>
+			<td id="cmd-60-trigger">mute</td>
+			<td id="perm-200-perm">essentials.mute.exempt</td>
+			<td id="perm-200-pdesc">Prevents a specified group or player from being muted</td>
+		</tr>
+				<tr>
+			<td>61</td>
+			<td>61</td>
+			<td id="cmd-61-cat">Moderator</td>
+			<td id="cmd-61-trigger">kick</td>
+			<td id="perm-61-perm">essentials.kick</td>
+			<td id="perm-61-pdesc">Allow access to the /kick command.</td>
+		</tr>
+				<tr>
+			<td>201</td>
+			<td>61</td>
+			<td id="cmd-61-cat">Moderator</td>
+			<td id="cmd-61-trigger">kick</td>
+			<td id="perm-201-perm">essentials.kick.exempt</td>
+			<td id="perm-201-pdesc">Prevents a specified group or player from being kicked</td>
+		</tr>
+				<tr>
+			<td>209</td>
+			<td>61</td>
+			<td id="cmd-61-cat">Moderator</td>
+			<td id="cmd-61-trigger">kick</td>
+			<td id="perm-209-perm">essentials.kick.notify</td>
+			<td id="perm-209-pdesc">User sees a notification when a user is kicked.</td>
+		</tr>
+				<tr>
+			<td>62</td>
+			<td>62</td>
+			<td id="cmd-62-cat">Moderator</td>
+			<td id="cmd-62-trigger">kickall</td>
+			<td id="perm-62-perm">essentials.kickall</td>
+			<td id="perm-62-pdesc">Allow access to the /kickall command.</td>
+		</tr>
+				<tr>
+			<td>63</td>
+			<td>63</td>
+			<td id="cmd-63-cat">Moderator</td>
+			<td id="cmd-63-trigger">unban</td>
+			<td id="perm-63-perm">essentials.unban</td>
+			<td id="perm-63-pdesc">Allow access to the /unban command.</td>
+		</tr>
+				<tr>
+			<td>64</td>
+			<td>64</td>
+			<td id="cmd-64-cat">Moderator</td>
+			<td id="cmd-64-trigger">unbanip</td>
+			<td id="perm-64-perm">essentials.unbanip</td>
+			<td id="perm-64-pdesc">Allow access to the /unbanip command.</td>
+		</tr>
+				<tr>
+			<td>65</td>
+			<td>65</td>
+			<td id="cmd-65-cat">Moderator</td>
+			<td id="cmd-65-trigger">togglejail</td>
+			<td id="perm-65-perm">essentials.togglejail</td>
+			<td id="perm-65-pdesc">Allow access to the /togglejail command.</td>
+		</tr>
+				<tr>
+			<td>97</td>
+			<td>65</td>
+			<td id="cmd-65-cat">Moderator</td>
+			<td id="cmd-65-trigger">togglejail</td>
+			<td id="perm-97-perm">essentials.jail.exempt</td>
+			<td id="perm-97-pdesc">Prevents a specified group or player from being jailed</td>
+		</tr>
+				<tr>
+			<td>223</td>
+			<td>65</td>
+			<td id="cmd-65-cat">Moderator</td>
+			<td id="cmd-65-trigger">togglejail</td>
+			<td id="perm-223-perm">essentials.togglejail.offline</td>
+			<td id="perm-223-pdesc">Allows jailing of players who are offline.  This may allow you to jail exempt players.</td>
+		</tr>
+				<tr>
+			<td>66</td>
+			<td>66</td>
+			<td id="cmd-66-cat">Moderator</td>
+			<td id="cmd-66-trigger">setjail</td>
+			<td id="perm-66-perm">essentials.setjail</td>
+			<td id="perm-66-pdesc">Allow access to the /setjail command.</td>
+		</tr>
+				<tr>
+			<td>67</td>
+			<td>67</td>
+			<td id="cmd-67-cat">Moderator</td>
+			<td id="cmd-67-trigger">deljail</td>
+			<td id="perm-67-perm">essentials.deljail</td>
+			<td id="perm-67-pdesc">Allow access to the /deljail command.</td>
+		</tr>
+				<tr>
+			<td>68</td>
+			<td>68</td>
+			<td id="cmd-68-cat">Moderator</td>
+			<td id="cmd-68-trigger">jails</td>
+			<td id="perm-68-perm">essentials.jails</td>
+			<td id="perm-68-pdesc">Allow access to the /jails command.</td>
+		</tr>
+				<tr>
+			<td>69</td>
+			<td>69</td>
+			<td id="cmd-69-cat">Moderator</td>
+			<td id="cmd-69-trigger">invsee</td>
+			<td id="perm-69-perm">essentials.invsee</td>
+			<td id="perm-69-pdesc">Allow access to the /invsee command.</td>
+		</tr>
+				<tr>
+			<td>70</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-70-perm">essentials.give</td>
+			<td id="perm-70-pdesc">Allow access to the /give command.</td>
+		</tr>
+				<tr>
+			<td>156</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-156-perm">essentials.itemspawn.exempt</td>
+			<td id="perm-156-pdesc">Allows spawning of items on the spawn blacklist.</td>
+		</tr>
+				<tr>
+			<td>157</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-157-perm">essentials.give.item-all</td>
+			<td id="perm-157-pdesc">If permission-based-item-spawn: Spawn all items</td>
+		</tr>
+				<tr>
+			<td>158</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-158-perm">essentials.give.item-&lt;itemname&gt;</td>
+			<td id="perm-158-pdesc">If permission-based-item-spawn: Spawn &lt;itemname&gt;</td>
+		</tr>
+				<tr>
+			<td>159</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-159-perm">essentials.give.item-[itemid]</td>
+			<td id="perm-159-pdesc">If permission-based-item-spawn: Spawn [itemid]</td>
+		</tr>
+				<tr>
+			<td>245</td>
+			<td>70</td>
+			<td id="cmd-70-cat">Cheat</td>
+			<td id="cmd-70-trigger">give</td>
+			<td id="perm-245-perm">essentials.oversizedstacks</td>
+			<td id="perm-245-pdesc">Allows spawning of stacks above normal max stack size</td>
+		</tr>
+				<tr>
+			<td>71</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-71-perm">essentials.item</td>
+			<td id="perm-71-pdesc">Allow access to the /item command.</td>
+		</tr>
+				<tr>
+			<td>152</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-152-perm">essentials.itemspawn.exempt</td>
+			<td id="perm-152-pdesc">Allows spawning of items on the spawn blacklist.</td>
+		</tr>
+				<tr>
+			<td>153</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-153-perm">essentials.itemspawn.item-all</td>
+			<td id="perm-153-pdesc">If permission-based-item-spawn: Spawn all items.</td>
+		</tr>
+				<tr>
+			<td>154</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-154-perm">essentials.itemspawn.item-[itemname]</td>
+			<td id="perm-154-pdesc">If permission-based-item-spawn: Spawn [itemname]</td>
+		</tr>
+				<tr>
+			<td>155</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-155-perm">essentials.itemspawn.item-[itemid]</td>
+			<td id="perm-155-pdesc">If permission-based-item-spawn: Spawn [itemid]</td>
+		</tr>
+				<tr>
+			<td>246</td>
+			<td>71</td>
+			<td id="cmd-71-cat">Cheat</td>
+			<td id="cmd-71-trigger">item</td>
+			<td id="perm-246-perm">essentials.oversizedstacks</td>
+			<td id="perm-246-pdesc">Allows spawning of stacks above normal max stack size</td>
+		</tr>
+				<tr>
+			<td>72</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-72-perm">essentials.unlimited</td>
+			<td id="perm-72-pdesc">Allow access to the /unlimited command.</td>
+		</tr>
+				<tr>
+			<td>160</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-160-perm">essentials.unlimited.item-all</td>
+			<td id="perm-160-pdesc">Allows the player to recieve an unlimited stack of any item.</td>
+		</tr>
+				<tr>
+			<td>161</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-161-perm">essentials.unlimited.item-[itemname]</td>
+			<td id="perm-161-pdesc">Allows the player to recieve an unlimited stack of [itemname]</td>
+		</tr>
+				<tr>
+			<td>162</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-162-perm">essentials.unlimited.item-[itemid]</td>
+			<td id="perm-162-pdesc">Allows the player to recieve an unlimited stack of [itemid]</td>
+		</tr>
+				<tr>
+			<td>163</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-163-perm">essentials.unlimited.item-bucket</td>
+			<td id="perm-163-pdesc">Allows the player to recieve an unlimited use of empty/lava/water buckets.</td>
+		</tr>
+				<tr>
+			<td>164</td>
+			<td>72</td>
+			<td id="cmd-72-cat">Cheat</td>
+			<td id="cmd-72-trigger">unlimited</td>
+			<td id="perm-164-perm">essentials.unlimited.others</td>
+			<td id="perm-164-pdesc">Allows the player to gift/remove another player with an unlimited stack.</td>
+		</tr>
+				<tr>
+			<td>73</td>
+			<td>73</td>
+			<td id="cmd-73-cat">Cheat</td>
+			<td id="cmd-73-trigger">kit</td>
+			<td id="perm-73-perm">essentials.kit</td>
+			<td id="perm-73-pdesc">Allow access to the /kit command.</td>
+		</tr>
+				<tr>
+			<td>99</td>
+			<td>73</td>
+			<td id="cmd-73-cat">Cheat</td>
+			<td id="cmd-73-trigger">kit</td>
+			<td id="perm-99-perm">essentials.kit.[kitname]</td>
+			<td id="perm-99-pdesc">Where [kitname] is the name of an existing kit</td>
+		</tr>
+				<tr>
+			<td>100</td>
+			<td>73</td>
+			<td id="cmd-73-cat">Cheat</td>
+			<td id="cmd-73-trigger">kit</td>
+			<td id="perm-100-perm">essentials.kit.*</td>
+			<td id="perm-100-pdesc">Allows access to all created kits</td>
+		</tr>
+				<tr>
+			<td>74</td>
+			<td>74</td>
+			<td id="cmd-74-cat">Cheat</td>
+			<td id="cmd-74-trigger">time</td>
+			<td id="perm-74-perm">essentials.time</td>
+			<td id="perm-74-pdesc">Allow access to the /time command.</td>
+		</tr>
+				<tr>
+			<td>189</td>
+			<td>74</td>
+			<td id="cmd-74-cat">Cheat</td>
+			<td id="cmd-74-trigger">time</td>
+			<td id="perm-189-perm">essentials.time.set</td>
+			<td id="perm-189-pdesc">User is allowed to change the time of the world.</td>
+		</tr>
+				<tr>
+			<td>75</td>
+			<td>75</td>
+			<td id="cmd-75-cat">Cheat</td>
+			<td id="cmd-75-trigger">tree</td>
+			<td id="perm-75-perm">essentials.tree</td>
+			<td id="perm-75-pdesc">Allow access to the /tree command.</td>
+		</tr>
+				<tr>
+			<td>76</td>
+			<td>76</td>
+			<td id="cmd-76-cat">Cheat</td>
+			<td id="cmd-76-trigger">bigtree</td>
+			<td id="perm-76-perm">essentials.bigtree</td>
+			<td id="perm-76-pdesc">Allow access to the /bigtree command.</td>
+		</tr>
+				<tr>
+			<td>77</td>
+			<td>77</td>
+			<td id="cmd-77-cat">Cheat</td>
+			<td id="cmd-77-trigger">god</td>
+			<td id="perm-77-perm">essentials.god</td>
+			<td id="perm-77-pdesc">Allow access to the /god command.</td>
+		</tr>
+				<tr>
+			<td>98</td>
+			<td>77</td>
+			<td id="cmd-77-cat">Cheat</td>
+			<td id="cmd-77-trigger">god</td>
+			<td id="perm-98-perm">essentials.god.others</td>
+			<td id="perm-98-pdesc">Allows you to god other players</td>
+		</tr>
+				<tr>
+			<td>78</td>
+			<td>78</td>
+			<td id="cmd-78-cat">Cheat</td>
+			<td id="cmd-78-trigger">heal</td>
+			<td id="perm-78-perm">essentials.heal</td>
+			<td id="perm-78-pdesc">Allow access to the /heal command.</td>
+		</tr>
+				<tr>
+			<td>207</td>
+			<td>78</td>
+			<td id="cmd-78-cat">Cheat</td>
+			<td id="cmd-78-trigger">heal</td>
+			<td id="perm-207-perm">essentials.heal.cooldown.bypass</td>
+			<td id="perm-207-pdesc">Bypass the heal cooldown</td>
+		</tr>
+				<tr>
+			<td>229</td>
+			<td>78</td>
+			<td id="cmd-78-cat">Cheat</td>
+			<td id="cmd-78-trigger">heal</td>
+			<td id="perm-229-perm">essentials.heal.others</td>
+			<td id="perm-229-pdesc">Allows healing another player</td>
+		</tr>
+				<tr>
+			<td>79</td>
+			<td>79</td>
+			<td id="cmd-79-cat">General</td>
+			<td id="cmd-79-trigger">suicide</td>
+			<td id="perm-79-perm">essentials.suicide</td>
+			<td id="perm-79-pdesc">Allow access to the /suicide command.</td>
+		</tr>
+				<tr>
+			<td>80</td>
+			<td>80</td>
+			<td id="cmd-80-cat">General</td>
+			<td id="cmd-80-trigger">powertool</td>
+			<td id="perm-80-perm">essentials.powertool</td>
+			<td id="perm-80-pdesc">Allow access to the /powertool command.</td>
+		</tr>
+				<tr>
+			<td>255</td>
+			<td>80</td>
+			<td id="cmd-80-cat">General</td>
+			<td id="cmd-80-trigger">powertool</td>
+			<td id="perm-255-perm">essentials.powertool.append</td>
+			<td id="perm-255-pdesc">Allows adding multiple commands to a single powertool.</td>
+		</tr>
+				<tr>
+			<td>81</td>
+			<td>81</td>
+			<td id="cmd-81-cat">Moderator</td>
+			<td id="cmd-81-trigger">weather</td>
+			<td id="perm-81-perm">essentials.weather</td>
+			<td id="perm-81-pdesc">Allow access to the /weather command.</td>
+		</tr>
+				<tr>
+			<td>82</td>
+			<td>82</td>
+			<td id="cmd-82-cat">Moderator</td>
+			<td id="cmd-82-trigger">thunder</td>
+			<td id="perm-82-perm">essentials.thunder</td>
+			<td id="perm-82-pdesc">Allow access to the /thunder command.</td>
+		</tr>
+				<tr>
+			<td>83</td>
+			<td>83</td>
+			<td id="cmd-83-cat">Moderator</td>
+			<td id="cmd-83-trigger">lightning</td>
+			<td id="perm-83-perm">essentials.lightning</td>
+			<td id="perm-83-pdesc">Allow access to the /lightning command.</td>
+		</tr>
+				<tr>
+			<td>101</td>
+			<td>84</td>
+			<td id="cmd-84-cat">Teleport</td>
+			<td id="cmd-84-trigger">tpaccept</td>
+			<td id="perm-101-perm">essentials.tpaccept</td>
+			<td id="perm-101-pdesc">Allow access to the /tpaccept command.</td>
+		</tr>
+				<tr>
+			<td>102</td>
+			<td>85</td>
+			<td id="cmd-85-cat">Teleport</td>
+			<td id="cmd-85-trigger">tpdeny</td>
+			<td id="perm-102-perm">essentials.tpdeny</td>
+			<td id="perm-102-pdesc">Allow access to the /tpdeny command.</td>
+		</tr>
+				<tr>
+			<td>105</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-105-perm">essentials.protect</td>
+			<td id="perm-105-pdesc">Allows the protection of rails and signs, otherwise they are not protected.</td>
+		</tr>
+				<tr>
+			<td>106</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-106-perm">essentials.protect.admin</td>
+			<td id="perm-106-pdesc">Allows the destruction of signs and rails.</td>
+		</tr>
+				<tr>
+			<td>107</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-107-perm">essentials.protect.alerts</td>
+			<td id="perm-107-pdesc">Allows a player to recieve protect alerts.</td>
+		</tr>
+				<tr>
+			<td>108</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-108-perm">essentials.protect.pvp</td>
+			<td id="perm-108-pdesc">When prevent PVP is set to true, this allows players to still PVP. Both attacker and defender need to have this permission.</td>
+		</tr>
+				<tr>
+			<td>109</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-109-perm">essentials.protect.exemptplacement</td>
+			<td id="perm-109-pdesc">Allows a player to ignore the block placement blacklist.</td>
+		</tr>
+				<tr>
+			<td>110</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-110-perm">essentials.protect.exemptusage</td>
+			<td id="perm-110-pdesc">Allows a player to ignore the usage blacklist.</td>
+		</tr>
+				<tr>
+			<td>111</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-111-perm">essentials.protect.ownerinfo</td>
+			<td id="perm-111-pdesc">Allows a player to examine protected objects to find their owner.</td>
+		</tr>
+				<tr>
+			<td>112</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-112-perm">essentials.protect.damage.contact</td>
+			<td id="perm-112-pdesc">Player will receive contact damage</td>
+		</tr>
+				<tr>
+			<td>113</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-113-perm">essentials.protect.damage.lava</td>
+			<td id="perm-113-pdesc">Player will receive lava damage</td>
+		</tr>
+				<tr>
+			<td>114</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-114-perm">essentials.protect.damage.tnt</td>
+			<td id="perm-114-pdesc">Player will receive tnt damage</td>
+		</tr>
+				<tr>
+			<td>115</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-115-perm">essentials.protect.damage.creeper</td>
+			<td id="perm-115-pdesc">Player will receive creeper damage</td>
+		</tr>
+				<tr>
+			<td>116</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-116-perm">essentials.protect.damage.projectiles</td>
+			<td id="perm-116-pdesc">Player will receive projectile damage</td>
+		</tr>
+				<tr>
+			<td>117</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-117-perm">essentials.protect.damage.fall</td>
+			<td id="perm-117-pdesc">Player will receive fall damage</td>
+		</tr>
+				<tr>
+			<td>118</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-118-perm">essentials.protect.damage.suffocation</td>
+			<td id="perm-118-pdesc">Player will receive suffocation damage</td>
+		</tr>
+				<tr>
+			<td>119</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-119-perm">essentials.protect.damage.fire</td>
+			<td id="perm-119-pdesc">Player will receive fire damage</td>
+		</tr>
+				<tr>
+			<td>120</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-120-perm">essentials.protect.damage.drowning</td>
+			<td id="perm-120-pdesc">Player will receive drowning damage</td>
+		</tr>
+				<tr>
+			<td>121</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-121-perm">essentials.protect.damage.lightning</td>
+			<td id="perm-121-pdesc">Player will receive lightning damage</td>
+		</tr>
+				<tr>
+			<td>122</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-122-perm">essentials.protect.damage.disable</td>
+			<td id="perm-122-pdesc">Admin override to prevent admins from dying</td>
+		</tr>
+				<tr>
+			<td>123</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-123-perm">essentials.chat.shout</td>
+			<td id="perm-123-pdesc">This allows you to send global messages, used if a chat-raidus is configured.</td>
+		</tr>
+				<tr>
+			<td>124</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-124-perm">essentials.chat.question</td>
+			<td id="perm-124-pdesc">This allows you to send global qeustions, used if a chat-raidus is configured.</td>
+		</tr>
+				<tr>
+			<td>125</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-125-perm">essentials.chat.spy</td>
+			<td id="perm-125-pdesc">A permission designed for admins, to intercept all local messages (ignoring the chat-radius).</td>
+		</tr>
+				<tr>
+			<td>126</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-126-perm">essentials.chat.color</td>
+			<td id="perm-126-pdesc">This allows you to color your chat messages using color codes.</td>
+		</tr>
+				<tr>
+			<td>127</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-127-perm">essentials.geoip.show</td>
+			<td id="perm-127-pdesc">Allows you to see the country and city of players.</td>
+		</tr>
+				<tr>
+			<td>128</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-128-perm">essentials.geoip.hide</td>
+			<td id="perm-128-pdesc">Allows you to hide your country and city from people who have permission essentials.geoip.show</td>
+		</tr>
+				<tr>
+			<td>129</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-129-perm">essentials.signs.create.mail</td>
+			<td id="perm-129-pdesc">Controls who can create a mail sign.</td>
+		</tr>
+				<tr>
+			<td>130</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-130-perm">essentials.signs.use.mail</td>
+			<td id="perm-130-pdesc">Controls who can use a mail sign.</td>
+		</tr>
+				<tr>
+			<td>131</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-131-perm">essentials.signs.create.protection</td>
+			<td id="perm-131-pdesc">Controls who can create a protection sign.</td>
+		</tr>
+				<tr>
+			<td>132</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-132-perm">essentials.signs.use.protection</td>
+			<td id="perm-132-pdesc">Controls who can use a protection sign. Typically given to everybody.</td>
+		</tr>
+				<tr>
+			<td>133</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-133-perm">essentials.signs.protection.override</td>
+			<td id="perm-133-pdesc">Used to override any protections. Typically given to mods &amp; admins</td>
+		</tr>
+				<tr>
+			<td>134</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-134-perm">essentials.signs.create.free</td>
+			<td id="perm-134-pdesc">Controls who can create free signs.</td>
+		</tr>
+				<tr>
+			<td>135</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-135-perm">essentials.signs.use.free</td>
+			<td id="perm-135-pdesc">Controls who can use free signs.</td>
+		</tr>
+				<tr>
+			<td>136</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-136-perm">essentials.signs.create.disposal</td>
+			<td id="perm-136-pdesc">Controls who can create disposal signs.</td>
+		</tr>
+				<tr>
+			<td>137</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-137-perm">essentials.signs.use.disposal</td>
+			<td id="perm-137-pdesc">Controls who can use disposal signs.</td>
+		</tr>
+				<tr>
+			<td>138</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-138-perm">essentials.signs.create.heal</td>
+			<td id="perm-138-pdesc">Controls who can create heal signs.</td>
+		</tr>
+				<tr>
+			<td>139</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-139-perm">essentials.signs.use.heal</td>
+			<td id="perm-139-pdesc">Controls who can use heal signs.</td>
+		</tr>
+				<tr>
+			<td>140</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-140-perm">essentials.signs.create.warp</td>
+			<td id="perm-140-pdesc">Controls who can create warp signs.</td>
+		</tr>
+				<tr>
+			<td>141</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-141-perm">essentials.signs.use.warp</td>
+			<td id="perm-141-pdesc">Controls who can use warp signs.</td>
+		</tr>
+				<tr>
+			<td>142</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-142-perm">essentials.signs.create.trade</td>
+			<td id="perm-142-pdesc">Controls who can create trade signs.</td>
+		</tr>
+				<tr>
+			<td>143</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-143-perm">essentials.signs.use.trade</td>
+			<td id="perm-143-pdesc">Controls who can use trade signs.</td>
+		</tr>
+				<tr>
+			<td>144</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-144-perm">essentials.signs.create.buy</td>
+			<td id="perm-144-pdesc">Controls who can create buy signs.</td>
+		</tr>
+				<tr>
+			<td>145</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-145-perm">essentials.signs.use.buy</td>
+			<td id="perm-145-pdesc">Controls who can use buy signs.</td>
+		</tr>
+				<tr>
+			<td>146</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-146-perm">essentials.signs.create.sell</td>
+			<td id="perm-146-pdesc">Controls who can create sell signs.</td>
+		</tr>
+				<tr>
+			<td>147</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-147-perm">essentials.signs.use.sell</td>
+			<td id="perm-147-pdesc">Controls who can use sell signs.</td>
+		</tr>
+				<tr>
+			<td>148</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-148-perm">essentials.signs.create.balance</td>
+			<td id="perm-148-pdesc">Controls who can create balance signs.</td>
+		</tr>
+				<tr>
+			<td>149</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-149-perm">essentials.signs.use.balance</td>
+			<td id="perm-149-pdesc">Controls who can use balance signs.</td>
+		</tr>
+				<tr>
+			<td>165</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-165-perm">essentials.signs.break.mail</td>
+			<td id="perm-165-pdesc">Controls who can break a mail sign.</td>
+		</tr>
+				<tr>
+			<td>166</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-166-perm">essentials.signs.break.protection</td>
+			<td id="perm-166-pdesc">Controls who can break a protection sign. Typically given to everybody.</td>
+		</tr>
+				<tr>
+			<td>167</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-167-perm">essentials.signs.break.free</td>
+			<td id="perm-167-pdesc">Controls who can break free signs.</td>
+		</tr>
+				<tr>
+			<td>168</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-168-perm">essentials.signs.break.disposal</td>
+			<td id="perm-168-pdesc">Controls who can break disposal signs.</td>
+		</tr>
+				<tr>
+			<td>169</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-169-perm">essentials.signs.break.heal</td>
+			<td id="perm-169-pdesc">Controls who can break heal signs.</td>
+		</tr>
+				<tr>
+			<td>170</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-170-perm">essentials.signs.break.warp</td>
+			<td id="perm-170-pdesc">Controls who can break warp signs.</td>
+		</tr>
+				<tr>
+			<td>171</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-171-perm">essentials.signs.break.trade</td>
+			<td id="perm-171-pdesc">Controls who can break trade signs.</td>
+		</tr>
+				<tr>
+			<td>172</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-172-perm">essentials.signs.break.buy</td>
+			<td id="perm-172-pdesc">Controls who can break buy signs.</td>
+		</tr>
+				<tr>
+			<td>173</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-173-perm">essentials.signs.break.sell</td>
+			<td id="perm-173-pdesc">Controls who can break sell signs.</td>
+		</tr>
+				<tr>
+			<td>174</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-174-perm">essentials.signs.break.balance</td>
+			<td id="perm-174-pdesc">Controls who can break balance signs.</td>
+		</tr>
+				<tr>
+			<td>175</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-175-perm">essentials.signs.create.time</td>
+			<td id="perm-175-pdesc">Controls who can create time signs.</td>
+		</tr>
+				<tr>
+			<td>176</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-176-perm">essentials.signs.use.time</td>
+			<td id="perm-176-pdesc">Controls who can use time signs.</td>
+		</tr>
+				<tr>
+			<td>177</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-177-perm">essentials.signs.break.time</td>
+			<td id="perm-177-pdesc">Controls who can break time signs.</td>
+		</tr>
+				<tr>
+			<td>180</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-180-perm">essentials.nocommandcost.[command]</td>
+			<td id="perm-180-pdesc">Removes the command cost of a given command.</td>
+		</tr>
+				<tr>
+			<td>181</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-181-perm">essentials.nocommandcost.all</td>
+			<td id="perm-181-pdesc">Removes the command cost of all commands.</td>
+		</tr>
+				<tr>
+			<td>182</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-182-perm">essentials.joinfullserver</td>
+			<td id="perm-182-pdesc">Player can join when the server is full.</td>
+		</tr>
+				<tr>
+			<td>186</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-186-perm">essentials.protect.exemptbreak</td>
+			<td id="perm-186-pdesc">Allows a player to ignore the break blacklist.</td>
+		</tr>
+				<tr>
+			<td>187</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-187-perm">essentials.protect.entitytarget.bypass</td>
+			<td id="perm-187-pdesc">Allows a player to be targeted by mobs.</td>
+		</tr>
+				<tr>
+			<td>192</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-192-perm">essentials.signs.create.weather</td>
+			<td id="perm-192-pdesc">Controls who can create weather signs.</td>
+		</tr>
+				<tr>
+			<td>193</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-193-perm">essentials.signs.use.weather</td>
+			<td id="perm-193-pdesc">Controls who can use weather signs.</td>
+		</tr>
+				<tr>
+			<td>194</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-194-perm">essentials.signs.break.weather</td>
+			<td id="perm-194-pdesc">Controls who can break weather signs.</td>
+		</tr>
+				<tr>
+			<td>195</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-195-perm">essentials.signs.trade.override</td>
+			<td id="perm-195-pdesc">Used to override the creator only protection on trade signs. Typically given to mods &amp; admins</td>
+		</tr>
+				<tr>
+			<td>199</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-199-perm">essentials.sleepingignored</td>
+			<td id="perm-199-pdesc">User isn't required to be sleeping, for time to be reset.</td>
+		</tr>
+				<tr>
+			<td>205</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-205-perm">essentials.protect.damage.fireball</td>
+			<td id="perm-205-pdesc">Player will receive fireball damage</td>
+		</tr>
+				<tr>
+			<td>220</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-220-perm">essentials.signs.color</td>
+			<td id="perm-220-pdesc">This allows you to color your signs using color codes.</td>
+		</tr>
+				<tr>
+			<td>224</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-224-perm">essentials.signs.create.spawnmob</td>
+			<td id="perm-224-pdesc">Controls who can create spawnmob signs.</td>
+		</tr>
+				<tr>
+			<td>225</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-225-perm">essentials.signs.use.spawnmob</td>
+			<td id="perm-225-pdesc">Controls who can use spawnmob signs.</td>
+		</tr>
+				<tr>
+			<td>226</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-226-perm">essentials.signs.break.spawnmob</td>
+			<td id="perm-226-pdesc">Controls who can break spawnmob signs.</td>
+		</tr>
+				<tr>
+			<td>231</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-231-perm">permissions.build</td>
+			<td id="perm-231-pdesc">Allows people to build when using permission systems which don't support build toggles.</td>
+		</tr>
+				<tr>
+			<td>270</td>
+			<td>0</td>
+			<td id="cmd-0-cat">Various</td>
+			<td id="cmd-0-trigger">None</td>
+			<td id="perm-270-perm">essentials.protect.alerts.notrigger</td>
+			<td id="perm-270-pdesc">Users with this permission do not trigger protect alerts.</td>
+		</tr>
+				<tr>
+			<td>203</td>
+			<td>101</td>
+			<td id="cmd-101-cat">Economy</td>
+			<td id="cmd-101-trigger">balancetop</td>
+			<td id="perm-203-perm">essentials.balancetop</td>
+			<td id="perm-203-pdesc">Allow access to the /balancetop command.</td>
+		</tr>
+				<tr>
+			<td>178</td>
+			<td>92</td>
+			<td id="cmd-92-cat">Spawn</td>
+			<td id="cmd-92-trigger">spawn</td>
+			<td id="perm-178-perm">essentials.spawn</td>
+			<td id="perm-178-pdesc">Allow access to the /spawn command.</td>
+		</tr>
+				<tr>
+			<td>179</td>
+			<td>93</td>
+			<td id="cmd-93-cat">Spawn</td>
+			<td id="cmd-93-trigger">setspawn</td>
+			<td id="perm-179-perm">essentials.setspawn</td>
+			<td id="perm-179-pdesc">Allow access to the /setspawn command.</td>
+		</tr>
+				<tr>
+			<td>183</td>
+			<td>94</td>
+			<td id="cmd-94-cat">Moderator</td>
+			<td id="cmd-94-trigger">socialspy</td>
+			<td id="perm-183-perm">essentials.socialspy</td>
+			<td id="perm-183-pdesc">Allow access to the /socialspy command.</td>
+		</tr>
+				<tr>
+			<td>185</td>
+			<td>95</td>
+			<td id="cmd-95-cat">General</td>
+			<td id="cmd-95-trigger">spawner</td>
+			<td id="perm-185-perm">essentials.spawner</td>
+			<td id="perm-185-pdesc">Allow access to the /spawner command.</td>
+		</tr>
+				<tr>
+			<td>249</td>
+			<td>95</td>
+			<td id="cmd-95-cat">General</td>
+			<td id="cmd-95-trigger">spawner</td>
+			<td id="perm-249-perm">essentials.spawner.[mob]</td>
+			<td id="perm-249-pdesc">Allows access to spawn a specific mob</td>
+		</tr>
+				<tr>
+			<td>250</td>
+			<td>95</td>
+			<td id="cmd-95-cat">General</td>
+			<td id="cmd-95-trigger">spawner</td>
+			<td id="perm-250-perm">essentials.spawner.*</td>
+			<td id="perm-250-pdesc">Allows the spawning of all mobs</td>
+		</tr>
+				<tr>
+			<td>184</td>
+			<td>96</td>
+			<td id="cmd-96-cat">General</td>
+			<td id="cmd-96-trigger">ignore</td>
+			<td id="perm-184-perm">essentials.ignore</td>
+			<td id="perm-184-pdesc">Allow access to the /ignore command.</td>
+		</tr>
+				<tr>
+			<td>197</td>
+			<td>97</td>
+			<td id="cmd-97-cat">XMPP</td>
+			<td id="cmd-97-trigger">setxmpp</td>
+			<td id="perm-197-perm">essentials.setxmpp</td>
+			<td id="perm-197-pdesc">Allow access to the /setxmpp command.</td>
+		</tr>
+				<tr>
+			<td>196</td>
+			<td>98</td>
+			<td id="cmd-98-cat">XMPP</td>
+			<td id="cmd-98-trigger">xmpp</td>
+			<td id="perm-196-perm">essentials.xmpp</td>
+			<td id="perm-196-pdesc">Allow access to the /xmpp command.</td>
+		</tr>
+				<tr>
+			<td>198</td>
+			<td>99</td>
+			<td id="cmd-99-cat">XMPP</td>
+			<td id="cmd-99-trigger">xmppspy</td>
+			<td id="perm-198-perm">essentials.xmppspy</td>
+			<td id="perm-198-pdesc">Allow access to the /xmppspy command.</td>
+		</tr>
+				<tr>
+			<td>188</td>
+			<td>100</td>
+			<td id="cmd-100-cat">Moderator</td>
+			<td id="cmd-100-trigger">fireball</td>
+			<td id="perm-188-perm">essentials.fireball</td>
+			<td id="perm-188-pdesc">Allow access to the /fireball command.</td>
+		</tr>
+				<tr>
+			<td>213</td>
+			<td>103</td>
+			<td id="cmd-103-cat">Teleport</td>
+			<td id="cmd-103-trigger">tpaall</td>
+			<td id="perm-213-perm">essentials.tpaall</td>
+			<td id="perm-213-pdesc">Allow access to the /tpaall command.</td>
+		</tr>
+				<tr>
+			<td>214</td>
+			<td>104</td>
+			<td id="cmd-104-cat">Cheat</td>
+			<td id="cmd-104-trigger">repair</td>
+			<td id="perm-214-perm">essentials.repair</td>
+			<td id="perm-214-pdesc">Allow access to the /repair command.</td>
+		</tr>
+				<tr>
+			<td>233</td>
+			<td>104</td>
+			<td id="cmd-104-cat">Cheat</td>
+			<td id="cmd-104-trigger">repair</td>
+			<td id="perm-233-perm">essentials.repair.armor</td>
+			<td id="perm-233-pdesc">Repair all also repairs equipped armor.</td>
+		</tr>
+				<tr>
+			<td>243</td>
+			<td>104</td>
+			<td id="cmd-104-cat">Cheat</td>
+			<td id="cmd-104-trigger">repair</td>
+			<td id="perm-243-perm">essentials.repair.enchanted</td>
+			<td id="perm-243-pdesc">Repairing of enchanted items.</td>
+		</tr>
+				<tr>
+			<td>216</td>
+			<td>105</td>
+			<td id="cmd-105-cat">Teleport</td>
+			<td id="cmd-105-trigger">delhome</td>
+			<td id="perm-216-perm">essentials.delhome</td>
+			<td id="perm-216-pdesc">Allow access to the /delhome command.</td>
+		</tr>
+				<tr>
+			<td>217</td>
+			<td>105</td>
+			<td id="cmd-105-cat">Teleport</td>
+			<td id="cmd-105-trigger">delhome</td>
+			<td id="perm-217-perm">essentials.delhome.others</td>
+			<td id="perm-217-pdesc">Allows you to delete the homes of other players.</td>
+		</tr>
+				<tr>
+			<td>227</td>
+			<td>106</td>
+			<td id="cmd-106-cat">General</td>
+			<td id="cmd-106-trigger">powertooltoggle</td>
+			<td id="perm-227-perm">essentials.powertooltoggle</td>
+			<td id="perm-227-pdesc">Allow access to the /powertooltoggle command.</td>
+		</tr>
+				<tr>
+			<td>234</td>
+			<td>107</td>
+			<td id="cmd-107-cat">Cheat</td>
+			<td id="cmd-107-trigger">gamemode</td>
+			<td id="perm-234-perm">essentials.gamemode</td>
+			<td id="perm-234-pdesc">Allow access to the /gamemode command.</td>
+		</tr>
+				<tr>
+			<td>235</td>
+			<td>107</td>
+			<td id="cmd-107-cat">Cheat</td>
+			<td id="cmd-107-trigger">gamemode</td>
+			<td id="perm-235-perm">essentials.gamemode.others</td>
+			<td id="perm-235-pdesc">Allows you to change the gamemode of other players.</td>
+		</tr>
+				<tr>
+			<td>236</td>
+			<td>108</td>
+			<td id="cmd-108-cat">Moderator</td>
+			<td id="cmd-108-trigger">sudo</td>
+			<td id="perm-236-perm">essentials.sudo</td>
+			<td id="perm-236-pdesc">Allow access to the /sudo command.</td>
+		</tr>
+				<tr>
+			<td>240</td>
+			<td>110</td>
+			<td id="cmd-110-cat">Cheat</td>
+			<td id="cmd-110-trigger">enchant</td>
+			<td id="perm-240-perm">essentials.enchant</td>
+			<td id="perm-240-pdesc">Allows access to the /enchant command.</td>
+		</tr>
+				<tr>
+			<td>242</td>
+			<td>110</td>
+			<td id="cmd-110-cat">Cheat</td>
+			<td id="cmd-110-trigger">enchant</td>
+			<td id="perm-242-perm">essentials.enchant.[enchantmentname]</td>
+			<td id="perm-242-pdesc">Allows access to each enchantment type.</td>
+		</tr>
+				<tr>
+			<td>256</td>
+			<td>111</td>
+			<td id="cmd-111-cat">General</td>
+			<td id="cmd-111-trigger">itemdb</td>
+			<td id="perm-256-perm">essentials.itemdb</td>
+			<td id="perm-256-pdesc">Allows access to the /itemdb command.</td>
+		</tr>
+				<tr>
+			<td>258</td>
+			<td>112</td>
+			<td id="cmd-112-cat">Moderator</td>
+			<td id="cmd-112-trigger">remove</td>
+			<td id="perm-258-perm">essentials.remove</td>
+			<td id="perm-258-pdesc">Allow access to the /remove command.</td>
+		</tr>
+				<tr>
+			<td>259</td>
+			<td>113</td>
+			<td id="cmd-113-cat">Cheat</td>
+			<td id="cmd-113-trigger">feed</td>
+			<td id="perm-259-perm">essentials.feed</td>
+			<td id="perm-259-pdesc">Allows access to the /feed command.</td>
+		</tr>
+				<tr>
+			<td>260</td>
+			<td>113</td>
+			<td id="cmd-113-cat">Cheat</td>
+			<td id="cmd-113-trigger">feed</td>
+			<td id="perm-260-perm">essentials.feed.others</td>
+			<td id="perm-260-pdesc">Allows a player to feed another player.</td>
+		</tr>
+				<tr>
+			<td>261</td>
+			<td>114</td>
+			<td id="cmd-114-cat">Cheat</td>
+			<td id="cmd-114-trigger">more</td>
+			<td id="perm-261-perm">essentials.more</td>
+			<td id="perm-261-pdesc">Allows access to the /more command.</td>
+		</tr>
+				<tr>
+			<td>265</td>
+			<td>114</td>
+			<td id="cmd-114-cat">Cheat</td>
+			<td id="cmd-114-trigger">more</td>
+			<td id="perm-265-perm">essentials.oversizedstacks</td>
+			<td id="perm-265-pdesc">Allows spawning of oversized stacks.</td>
+		</tr>
+				<tr>
+			<td>262</td>
+			<td>115</td>
+			<td id="cmd-115-cat">Cheat</td>
+			<td id="cmd-115-trigger">break</td>
+			<td id="perm-262-perm">essentials.break</td>
+			<td id="perm-262-pdesc">Allows access to the /break command.</td>
+		</tr>
+				<tr>
+			<td>263</td>
+			<td>115</td>
+			<td id="cmd-115-cat">Cheat</td>
+			<td id="cmd-115-trigger">break</td>
+			<td id="perm-263-perm">essentials.break.bedrock</td>
+			<td id="perm-263-pdesc">Allows the breaking of bedrock.</td>
+		</tr>
+				<tr>
+			<td>264</td>
+			<td>116</td>
+			<td id="cmd-116-cat">Moderator</td>
+			<td id="cmd-116-trigger">killall</td>
+			<td id="perm-264-perm">essentials.killall</td>
+			<td id="perm-264-pdesc">Allows access to the /killall command.</td>
+		</tr>
+			</tbody>
+</table>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script>window.jQueryUI || document.write('<script src="assets/js/libs/jquery-ui-1.8.16.custom.min.js"><\/script>')</script>
+    
+  <script src="assets/js/libs/jquery.dataTables.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/mylibs/scripts.js"></script>
+  <!-- scripts concatenated and minified via ant build script-->
+  <!-- end scripts-->
+
+	
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>ESS Command Wiki</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link href="assets/css/ess1/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="assets/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main" role="main">
+    			<h1>This is the commands page</h1>
+<a href="permissions.html" class="button switch-view">View Permissions Only</a><table id="commands" class="datatable">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>&nbsp</th>
+			<th>Cat</th>
+			<th>Trigger</th>
+			<th>Alias</th>
+			<th>Description</th>
+			<th>Syntax</th>
+		</tr>
+	</thead>
+	<tbody>
+				<tr>
+			<td>1</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>help</td>
+			<td></td>
+			<td>This displays the help commands for essentials.</td>
+			<td>/&lt;command&gt; [searchterm] [2;3;4;5; etc..]</td>
+				<tr>
+			<td>2</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>depth</td>
+			<td></td>
+			<td>Displays your current block depth in relation to sea-level.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>3</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>getpos</td>
+			<td>coords</td>
+			<td>Displays your current coordinate location in the world.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>4</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>compass</td>
+			<td></td>
+			<td>Displays your current bearing in the world.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>5</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>top</td>
+			<td></td>
+			<td>Teleports you to the highest block at your current location.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>6</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>jump</td>
+			<td>j</td>
+			<td>Teleports you to the spot you select.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>7</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>back</td>
+			<td>return</td>
+			<td>Returns you to your last position from a prior teleport.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>8</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>world</td>
+			<td></td>
+			<td>Allows you to teleport to different world.</td>
+			<td>/&lt;command&gt; &lt;nether|normal|0;1;2;3; etc..&gt;</td>
+				<tr>
+			<td>9</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tptoggle</td>
+			<td></td>
+			<td>Toggles players ability to teleport to you.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>10</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpa</td>
+			<td>call</td>
+			<td>Asks the player if you can teleport to them.</td>
+			<td>/&lt;command&gt; &lt;player to teleport TO&gt;</td>
+				<tr>
+			<td>11</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tp</td>
+			<td>tele, tp2p</td>
+			<td>Teleport directly to a player.</td>
+			<td>/&lt;command&gt; &lt;player to teleport TO&gt;<br />
+/&lt;command&gt; &lt;player1&gt; &lt;player2&gt;</td>
+				<tr>
+			<td>12</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpo</td>
+			<td></td>
+			<td>Overrides players preferences and teleports you to the player.</td>
+			<td>/&lt;command&gt; &lt;player to teleport TO&gt;</td>
+				<tr>
+			<td>13</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpahere</td>
+			<td></td>
+			<td>Asks the specified player to accept transport to your location.</td>
+			<td>/&lt;command&gt; &lt;player to teleport to YOUR SELF&gt;</td>
+				<tr>
+			<td>14</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tphere</td>
+			<td>s</td>
+			<td>Teleport player directly to you.</td>
+			<td>/&lt;command&gt; &lt;player to teleport to YOUR SELF&gt;</td>
+				<tr>
+			<td>15</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpohere</td>
+			<td></td>
+			<td>Overrides players preferences and teleports player to you.</td>
+			<td>/&lt;command&gt; &lt;player to teleport to YOUR SELF&gt;</td>
+				<tr>
+			<td>16</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tppos</td>
+			<td></td>
+			<td>Teleports you directly to a location.</td>
+			<td>/&lt;command&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; [yaw] [pitch]</td>
+				<tr>
+			<td>17</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpall</td>
+			<td></td>
+			<td>Teleports all connected players.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>18</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>home</td>
+			<td></td>
+			<td>Teleports you home.</td>
+			<td>/&lt;command&gt; [name]<br />
+/&lt;command&gt; &lt;player nick&gt;:[name]</td>
+				<tr>
+			<td>19</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>sethome</td>
+			<td></td>
+			<td>Sets your home location.</td>
+			<td>/&lt;command&gt; [name]<br />
+/&lt;command&gt; &lt;player nick&gt;:&lt;name&gt;</td>
+				<tr>
+			<td>20</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>warp</td>
+			<td>warps</td>
+			<td>Warps you to a pre-set location.</td>
+			<td>/&lt;command&gt; [warp name [player]]</td>
+				<tr>
+			<td>21</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>setwarp</td>
+			<td>createwarp</td>
+			<td>Defines a new warp location.</td>
+			<td>/&lt;command&gt; &lt;warp name&gt;</td>
+				<tr>
+			<td>22</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>delwarp</td>
+			<td>remwarp, rmwarp</td>
+			<td>Removes a warp location by warp name.</td>
+			<td>/&lt;command&gt; &lt;warp name&gt;</td>
+				<tr>
+			<td>23</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>eco</td>
+			<td>economy</td>
+			<td>Modify a players balance by the given amount.</td>
+			<td>/&lt;command&gt; &lt;give|take|reset&gt; &lt;player name&gt; &lt;amount&gt;</td>
+				<tr>
+			<td>24</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>worth</td>
+			<td></td>
+			<td>Displays how much an item is worth</td>
+			<td>/&lt;command&gt; [item [amount]]</td>
+				<tr>
+			<td>25</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>setworth</td>
+			<td></td>
+			<td>Sets the worth of an item.</td>
+			<td>/&lt;command&gt; &lt;itemname|id&gt; &lt;price&gt;</td>
+				<tr>
+			<td>26</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>sell</td>
+			<td></td>
+			<td>Sells an item with amount specified. </td>
+			<td>/&lt;command&gt; &lt;itemname|id&gt; [amount]<br />
+/&lt;command&gt; &lt;hand|invent|blocks&gt;</td>
+				<tr>
+			<td>27</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>balance</td>
+			<td>bal, emoney</td>
+			<td>Gives the current balance of a player. </td>
+			<td>/&lt;command&gt; [player name]</td>
+				<tr>
+			<td>28</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>pay</td>
+			<td></td>
+			<td>Pays a specified player from your balance.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;amount&gt;</td>
+				<tr>
+			<td>29</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>info</td>
+			<td>ifo, news, eabout</td>
+			<td>This allows you to see information about the server.</td>
+			<td>/&lt;command&gt; &lt;page number/chapter&gt;</td>
+				<tr>
+			<td>30</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>msg</td>
+			<td>tell, m, t, whisper</td>
+			<td>This allows you to private message another player.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;message&gt;</td>
+				<tr>
+			<td>31</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>r</td>
+			<td>reply</td>
+			<td>Quickly reply to the last player to message you.</td>
+			<td>/&lt;command&gt; &lt;message&gt;</td>
+				<tr>
+			<td>32</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>afk</td>
+			<td></td>
+			<td>Sets your status as AFK.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>33</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>rules</td>
+			<td></td>
+			<td>Displays the rules.</td>
+			<td>/&lt;command&gt; &lt;page number&gt;</td>
+				<tr>
+			<td>34</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>motd</td>
+			<td></td>
+			<td>Displays the motd (Message of the Day).</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>35</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>me</td>
+			<td>action, describe</td>
+			<td>Allows you to emote.</td>
+			<td>/&lt;command&gt; &lt;emote message&gt;</td>
+				<tr>
+			<td>36</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>list</td>
+			<td>who, playerlist, online</td>
+			<td>Lists the players online and how many slots are left.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>37</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>mail</td>
+			<td></td>
+			<td>Allows you to send & receive mail.</td>
+			<td>/&lt;command&gt; &lt;read|clear|send [player] [message]&gt;</td>
+				<tr>
+			<td>38</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>helpop</td>
+			<td></td>
+			<td>Requests help from online staff.</td>
+			<td>/&lt;command&gt; &lt;message&gt;</td>
+				<tr>
+			<td>39</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>whois</td>
+			<td></td>
+			<td>Displays player information.</td>
+			<td>/&lt;command&gt; &lt;nickname|playername&gt;</td>
+				<tr>
+			<td>40</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>nick</td>
+			<td></td>
+			<td>Change your display name.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;nick|off&gt;</td>
+				<tr>
+			<td>41</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>realname</td>
+			<td></td>
+			<td>Allows you to see a player's real username</td>
+			<td>/&lt;command&gt; &lt;player&gt;</td>
+				<tr>
+			<td>42</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>seen</td>
+			<td></td>
+			<td>Check when a player was last online.</td>
+			<td>/&lt;command&gt; &lt;player&gt;</td>
+				<tr>
+			<td>43</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>essentials</td>
+			<td></td>
+			<td>Reload Essentials.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>109</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>near</td>
+			<td>nearby</td>
+			<td>Lists the players who are nearby</td>
+			<td>/&lt;command&gt; [radius]<br />
+/&lt;command&gt; &lt;playername&gt; [radius]</td>
+				<tr>
+			<td>45</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>gc</td>
+			<td>mem, memory</td>
+			<td>Displays server usage information.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>102</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>ptime</td>
+			<td>playertime</td>
+			<td>Change a players time.</td>
+			<td>/&lt;command&gt; [list|reset|day|night|dawn|17:30|4pm|4000ticks] &lt;player|*&gt;</td>
+				<tr>
+			<td>47</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>spawnmob</td>
+			<td></td>
+			<td>Allows you to spawn a specified mob with an optional mount.</td>
+			<td>/&lt;command&gt; &lt;mob&gt; [amount] [player]<br />
+/&lt;command&gt; &lt;mob&gt;:&lt;data&gt; [amount] [player]<br />
+/&lt;command&gt; &lt;mob&gt;,&lt;mob&gt; [amount] [player]</td>
+				<tr>
+			<td>48</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>clearinventory</td>
+			<td>ci</td>
+			<td>Clear a players inventory.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>49</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>broadcast</td>
+			<td>bcast</td>
+			<td>Broadcast to all players.</td>
+			<td>/&lt;command&gt; &lt;message&gt;</td>
+				<tr>
+			<td>50</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>antioch</td>
+			<td></td>
+			<td>Holy hand grenade.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>51</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>burn</td>
+			<td></td>
+			<td>Sets a player on fire.</td>
+			<td>/&lt;command&gt; &lt;player name&gt; &lt;seconds&gt;</td>
+				<tr>
+			<td>52</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>ext</td>
+			<td>extinguish</td>
+			<td>Extinguish a player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt;</td>
+				<tr>
+			<td>53</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>kill</td>
+			<td></td>
+			<td>Kills a player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt;</td>
+				<tr>
+			<td>54</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>ping</td>
+			<td>pong</td>
+			<td>Pong!.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>55</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>backup</td>
+			<td></td>
+			<td>Runs the backup command</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>56</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>nuke</td>
+			<td></td>
+			<td>Think carpet bomb.</td>
+			<td>/&lt;command&gt; [Player]</td>
+				<tr>
+			<td>57</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>ban</td>
+			<td></td>
+			<td>Bans a specified player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt; &lt;reason&gt;</td>
+				<tr>
+			<td>58</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>tempban</td>
+			<td></td>
+			<td>Temporary bans a specified player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt; &lt;time&gt;</td>
+				<tr>
+			<td>59</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>banip</td>
+			<td></td>
+			<td>Bans a players IP.</td>
+			<td>/&lt;command&gt; &lt;player name|IP address&gt;</td>
+				<tr>
+			<td>60</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>mute</td>
+			<td></td>
+			<td>Mutes or un-mutes a specified player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt; [time]</td>
+				<tr>
+			<td>61</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>kick</td>
+			<td></td>
+			<td>Kicks a player off the server.</td>
+			<td>/&lt;command&gt; &lt;player name&gt; [reason]</td>
+				<tr>
+			<td>62</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>kickall</td>
+			<td></td>
+			<td>Kicks all players off the server.</td>
+			<td>/&lt;command&gt; [reason]</td>
+				<tr>
+			<td>63</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>unban</td>
+			<td>pardon</td>
+			<td>Unbans a player.</td>
+			<td>/&lt;command&gt; &lt;player name&gt;</td>
+				<tr>
+			<td>64</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>unbanip</td>
+			<td>pardonip</td>
+			<td>Unbans a players IP address.</td>
+			<td>/&lt;command&gt; &lt;player name|IP address&gt;</td>
+				<tr>
+			<td>65</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>togglejail</td>
+			<td>tjail, unjail</td>
+			<td>Sends/Removes a player to a jail.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;jail name&gt; [time]<br />
+/&lt;command&gt; &lt;player&gt; [time]</td>
+				<tr>
+			<td>66</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>setjail</td>
+			<td></td>
+			<td>Create a new jail location.</td>
+			<td>/&lt;command&gt; &lt;jail name&gt;</td>
+				<tr>
+			<td>67</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>deljail</td>
+			<td></td>
+			<td>Deletes a jail.</td>
+			<td>/&lt;command&gt; &lt;jail name&gt;</td>
+				<tr>
+			<td>68</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>jails</td>
+			<td></td>
+			<td>List all jails.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>69</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>invsee</td>
+			<td></td>
+			<td>See the inventory of other players. </td>
+			<td>/&lt;command&gt; [player name]</td>
+				<tr>
+			<td>70</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>give</td>
+			<td></td>
+			<td>Give another player an item</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;item|item:damage value&gt; [amount]</td>
+				<tr>
+			<td>71</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>item</td>
+			<td>i</td>
+			<td>Gives yourself a specified item.</td>
+			<td>/&lt;command&gt; &lt;item|item:damage value&gt; [amount]</td>
+				<tr>
+			<td>72</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>unlimited</td>
+			<td>ul</td>
+			<td>Allows the unlimited placing of items.</td>
+			<td>/&lt;command&gt; &lt;list|item|clear&gt; [player]</td>
+				<tr>
+			<td>73</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>kit</td>
+			<td></td>
+			<td>Spawn a predefined kit.</td>
+			<td>/&lt;command&gt; [kit name]</td>
+				<tr>
+			<td>74</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>time</td>
+			<td>day, night</td>
+			<td>Change or display the server time.</td>
+			<td>/&lt;command&gt; [day|night|dawn|17:30|4pm|4000ticks] [worldname|all]</td>
+				<tr>
+			<td>75</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>tree</td>
+			<td></td>
+			<td>Spawns a tree.</td>
+			<td>/&lt;command&gt; &lt;tree|birch|redwood&gt;</td>
+				<tr>
+			<td>76</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>bigtree</td>
+			<td></td>
+			<td>Spawns a big tree.</td>
+			<td>/&lt;command&gt; &lt;tree|redwood&gt;</td>
+				<tr>
+			<td>77</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>god</td>
+			<td>godmode, tgm</td>
+			<td>Toggles god mode.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>78</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>heal</td>
+			<td></td>
+			<td>Heal a player.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>79</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>suicide</td>
+			<td></td>
+			<td>Commit suicide.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>80</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>powertool</td>
+			<td>pt</td>
+			<td>Assigns a command to the item in hand.</td>
+			<td>/&lt;command&gt; [command [arguments]]<br />
+/&lt;command&gt; c:&lt;chat message&gt;<br />
+/&lt;command&gt; [a/r:]&lt;command&gt; &lt;arguments&gt;<br />
+/&lt;command&gt; [d/l]:</td>
+				<tr>
+			<td>81</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>weather</td>
+			<td>sky, sun, storm</td>
+			<td>Manipulates the weather.</td>
+			<td>/&lt;command&gt; &lt;storm|sun&gt; &lt;duration&gt;</td>
+				<tr>
+			<td>82</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>thunder</td>
+			<td></td>
+			<td>Toggle/trigger thunder.</td>
+			<td>/&lt;command&gt; &lt;true|false&gt; [duration]</td>
+				<tr>
+			<td>83</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>lightning</td>
+			<td>strike, smite, thor, shock</td>
+			<td>Lets you strike lighting.</td>
+			<td>/&lt;command&gt; &lt;player&gt; </td>
+				<tr>
+			<td>84</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpaccept</td>
+			<td>tpyes</td>
+			<td>Accept a /tpa request.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>85</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpdeny</td>
+			<td>tpno</td>
+			<td>Deny a /tpa request.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>0</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Various</td>
+			<td>None</td>
+			<td></td>
+			<td>No Command Assigned</td>
+			<td>No Command Assigned</td>
+				<tr>
+			<td>101</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Economy</td>
+			<td>balancetop</td>
+			<td>baltop</td>
+			<td>Displays the top account balances.</td>
+			<td>/&lt;command&gt; [page]</td>
+				<tr>
+			<td>92</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Spawn</td>
+			<td>spawn</td>
+			<td></td>
+			<td>Teleports you to spawn.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>93</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Spawn</td>
+			<td>setspawn</td>
+			<td></td>
+			<td>Sets the spawn location.</td>
+			<td>/&lt;command&gt; [group]</td>
+				<tr>
+			<td>94</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>socialspy</td>
+			<td></td>
+			<td>See other players private messages</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>95</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>spawner</td>
+			<td></td>
+			<td>Change the mob type of a spawner</td>
+			<td>/&lt;command&gt; &lt;Mob&gt;</td>
+				<tr>
+			<td>96</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>ignore</td>
+			<td></td>
+			<td>Ignore a player</td>
+			<td>/&lt;command&gt; &lt;player&gt;</td>
+				<tr>
+			<td>97</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>XMPP</td>
+			<td>setxmpp</td>
+			<td></td>
+			<td>Set your XMPP address.</td>
+			<td>/&lt;command&gt; &lt;address&gt;</td>
+				<tr>
+			<td>98</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>XMPP</td>
+			<td>xmpp</td>
+			<td></td>
+			<td>Send a message to a player's XMPP.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;message&gt;</td>
+				<tr>
+			<td>99</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>XMPP</td>
+			<td>xmppspy</td>
+			<td></td>
+			<td>Toggle XMPP spy for all messages.</td>
+			<td>/&lt;command&gt; &lt;player&gt;</td>
+				<tr>
+			<td>100</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>fireball</td>
+			<td></td>
+			<td>Like a GHAST</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>103</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>tpaall</td>
+			<td></td>
+			<td>Requests all players online to teleport to you.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>104</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>repair</td>
+			<td>fix</td>
+			<td>Repairs the durability of all or one item.</td>
+			<td>/&lt;command&gt; [hand|all]</td>
+				<tr>
+			<td>105</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Teleport</td>
+			<td>delhome</td>
+			<td>remhome,rmhome</td>
+			<td>Removes a home</td>
+			<td>/&lt;command&gt; &lt;name&gt;<br />
+/&lt;command&gt; &lt;player nick&gt;:&lt;name&gt;</td>
+				<tr>
+			<td>106</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>powertooltoggle</td>
+			<td>ptt</td>
+			<td>Enables or disables all current powertools</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>107</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>gamemode</td>
+			<td>gm, creative, creativemode</td>
+			<td>Change player gamemode.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>108</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>sudo</td>
+			<td></td>
+			<td>Make another user perform a command.</td>
+			<td>/&lt;command&gt; &lt;player&gt; &lt;command [args]&gt;</td>
+				<tr>
+			<td>110</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>enchant</td>
+			<td>enchantment</td>
+			<td>Enchants the item the user is holding.</td>
+			<td>/&lt;command&gt; [enchantment name] [level]]</td>
+				<tr>
+			<td>111</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>General</td>
+			<td>itemdb</td>
+			<td></td>
+			<td>Searches for an item.</td>
+			<td>/&lt;command&gt; [search term]</td>
+				<tr>
+			<td>112</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>remove</td>
+			<td></td>
+			<td>Removes entities in your world</td>
+			<td>/&lt;command&gt; &lt;drops|arrows|boats|minecarts|xp|paintings&gt; [radius]</td>
+				<tr>
+			<td>113</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>feed</td>
+			<td></td>
+			<td>Satisfy the hunger.</td>
+			<td>/&lt;command&gt; [player]</td>
+				<tr>
+			<td>114</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>more</td>
+			<td></td>
+			<td>Fills the item stack in hand to maximum size.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>115</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Cheat</td>
+			<td>break</td>
+			<td></td>
+			<td>Breaks the block you are looking at.</td>
+			<td>/&lt;command&gt;</td>
+				<tr>
+			<td>116</td>
+			<td>
+								<img src="assets/img/round_add.png" class="details-img" alt=""/>			</td>
+			<td>Moderator</td>
+			<td>killall</td>
+			<td>butcher</td>
+			<td>Kills all or local mobs.</td>
+			<td>/&lt;command&gt; [mob type] &lt;radius&gt;</td>
+			</tbody>
+</table>    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script>window.jQueryUI || document.write('<script src="assets/js/libs/jquery-ui-1.8.16.custom.min.js"><\/script>')</script>
+    
+  <script src="assets/js/libs/jquery.dataTables.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/mylibs/scripts.js"></script>
+  <!-- scripts concatenated and minified via ant build script-->
+  <!-- end scripts-->
+
+	
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>
