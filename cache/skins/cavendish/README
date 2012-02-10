@@ -1,0 +1,14 @@
+When you installed the Theme you have to create a file with options. There is already a example options.css given with the Skin as it is used in the Web Community Wiki
+
+For the Logo
+#header h6 a {
+	/* change this to the URL of your Logo */
+    background: transparent url("../../images/e/e0/Logo_Gross.png") no-repeat;
+	width: 340px;
+    height: 44px;
+}
+
+When you would like to have a fixed width
+#container {
+	width: 1024px;
+}

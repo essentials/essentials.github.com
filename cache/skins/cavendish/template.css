@@ -1,0 +1,203 @@
+/* mozilla.org Cavendish Template Styles
+ * Initial Design by Daniel Burka and Steven Garrity
+*/
+
+/* Basic Structure */
+
+
+/* Header */
+
+	#header {
+		background: #455372 url("header_bl.png") bottom left repeat-x;
+		position: relative;
+		min-height: 39px;
+		height: 5em;
+		padding: 0;
+		height: 3em;
+		padding: 15px 0;
+	} 
+	
+	#ignored {}
+	
+	#header h6 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		font-size: 2px;
+		background: url("header_tl.gif") no-repeat;
+		height: 8px;
+		z-index: 100; /* above the UL */
+	}
+
+	#header ul a {
+		float: left;
+		display: block;
+		padding: 4px 4px 4px 10px;
+		background: transparent url("header_tab.gif") 0% -600px no-repeat;
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+	}
+	#header ul li:hover a { 
+		background-position: 0% -400px; 
+		text-decoration: none;
+		border-bottom: 0px;
+	}
+	#header a:hover { 
+		text-decoration: none;
+		border-bottom: 0px;
+	}
+	#header ul li:hover { 
+		background-position: 100% -400px; 
+	}
+	
+	body.sectionAbout li#menu_aboutus a,
+	body.sectionProducts li#menu_products a,
+	body.sectionSupport li#menu_support a,
+	body.sectionDevelopers li#menu_developers a,
+	body.sectionStore li#menu_store a {
+		background-position: 0% -200px;
+		color: #039;
+	}
+	
+	body.sectionAbout li#menu_aboutus,
+	body.sectionProducts li#menu_products,
+	body.sectionSupport li#menu_support,
+	body.sectionDevelopers li#menu_developers,
+	body.sectionStore li#menu_store {
+		background-position: 100% -200px;
+		border-bottom: 1px solid #fff;
+	}
+	
+	body.sectionAbout li#menu_aboutus:hover,
+	body.sectionProducts li#menu_products:hover,
+	body.sectionSupport li#menu_support:hover,
+	body.sectionDevelopers li#menu_developers:hover,
+	body.sectionStore li#menu_store:hover {
+		background-position: 100% 0%;
+	}
+	
+	body.sectionAbout li#menu_aboutus:hover a,
+	body.sectionProducts li#menu_products:hover a,
+	body.sectionSupport li#menu_support:hover a,
+	body.sectionDevelopers li#menu_developers:hover a,
+	body.sectionStore li#menu_store:hover a {
+		background-position: 0% 0%;
+		color: #333;
+	}
+	
+/* Sidebar */
+
+	#nav:before {
+		line-height: 0.1;
+		font-size: 1px;
+		background: transparent url("menu_tr.gif") no-repeat top right;
+		margin: 0;
+		height: 9px;
+		display: block;
+		border-bottom: 1px solid #ddd;
+		content: url("key-point_tl.gif");
+	}
+	#nav {
+		background: #E0E9E9 url("menu_back.gif") right repeat-y;
+	}
+	#nav:after {
+		display: block;
+		padding-top: 0;
+		line-height: 0.1;
+		font-size: 1px;
+		content:  url("key-point_bl.gif");
+		margin: 0 0 0 0;
+		height: 8px;
+		background: transparent url("menu_br.gif") scroll no-repeat bottom right ;
+		border-top: 1px solid #fff;
+	}
+	
+	#nav, #nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	#nav {
+		margin-bottom: 1em;
+	}	
+	#nav li {
+		display: inline;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#nav li span { /* used for un-linked menu items */
+		display: block;
+		padding: 6px 10px;
+		font-weight: bold;
+		color: #666;
+		text-shadow: 0.1em 0.1em 0.1em grey;
+	}
+
+	#nav li span#configParent, #nav li span #configuration {
+		display: inline;
+		font-weight: normal;
+		padding: 0;
+	}
+	
+	#nav li a {
+		display: block;
+		padding: 8px 10px;
+		text-decoration: none;
+		background: #EDF2F2;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #fff;
+		border-right: 1px solid #ddd;
+		text-shadow: 0.1em 0.1em 0.1em grey;
+	}
+	#nav li a[href^="http://"] {
+		background: #EDF2F2 none repeat scroll 0 0;
+	}
+
+	#nav li a:hover {
+		background: #E0E9E9;
+	}
+	
+	#nav li li span { /* used for un-linked menu items */
+		padding: 4px 8px 4px 20px;
+	}
+	
+	#nav li li a {
+		padding: 6px 8px 6px 20px;
+	}
+	
+	#oN {
+		background-color: #E0E9E9;
+	}
+	#oN:hover {
+		background-color: #C6DCDC;
+	}
+	#nav  li ul #feedlinks {
+		display: block;
+		padding: 8px 20px;
+		text-decoration: none;
+		background: #EDF2F2;
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #fff;
+		border-right: 1px solid #ddd;
+	}
+	#nav  li ul #feedlinks #feed-rss {
+		display: inline;
+		padding: 8px 20px;
+		background: #EDF2F2;
+		border: none;
+		padding: 0px;
+	}
+	#nav  li ul #feedlinks  #feed-atom {
+		display: inline;
+		text-decoration: none;
+		background: #EDF2F2;
+		border: none;
+		padding: 0px;
+	}
+	
+	#nav .pBody {
+		border: none;
+	}
