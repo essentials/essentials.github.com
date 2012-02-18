@@ -108,9 +108,8 @@ class cavendishTemplate extends QuickTemplate {
 	<div id="header">
 		<a name="top" id="contentTop"></a>
 		<h6>
-		<a
-	    href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>"
-	    title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a></h6>
+        <a id="esslogo" href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a>
+        <a id="mcshad" href="http://mcserverhelp.org" title="MCserverhelp"><?php $this->text('pagetitle') ?></a></h6>
 		<ul>
     <?php        foreach($this->data['content_actions'] as $key => $tab) {
                     echo '

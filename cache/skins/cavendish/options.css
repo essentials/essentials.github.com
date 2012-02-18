@@ -2,17 +2,34 @@
 This is a example options.css for the Cavendish Skin 
  */
   
-#header h6 a {
+#header h6 #esslogo{
 	/* change this to the URL of your Logo */
     background: transparent url("../../images/c/c9/Logo.png") no-repeat;
 	/* put in the width of you Logo */
-	width: 340px;
+	width: 250px;
 	/* put in the height of you Logo */
-    height: 44px;
+    height: 62px;
+    margin-top: 8px;
+    margin-right: 130px;
 }
 
-/* uncomment this if you want to have a fixed width for the skin
-#globalWrapper {
-	width: 1024px;
+#header {
+height: 4em;
 }
-*/
+
+#header h6 #mcshad {
+	/* change this to the URL of your Logo */
+    background: transparent url("http://www.worldofterra.com/uploads/mchelp.png") no-repeat;
+	/* put in the width of you Logo */
+	width: 248px;
+	/* put in the height of you Logo */
+    height: 62px;
+    margin-left:auto;
+    margin-right:270px;
+}
+
+
+
+#globalWrapper {
+	min-width: 900px;
+}

@@ -143,8 +143,7 @@ div#header {
 }
 
 #header h6 a {
-    margin-top: 15px;
-    display: block;
+    display: inline-block;
     text-indent: -700em;
     text-decoration: none;
 }
@@ -1130,6 +1129,7 @@ special external link styling */
 	top: 0;
 	right: 0;
 	padding: 12px 20px 0 0;
+    width: 35%;
 	background: url("header_tr.gif") no-repeat top right;
 	margin: 0; /* need for IE Mac */
 	text-align: right; /* need for IE Mac */
@@ -1180,7 +1180,8 @@ special external link styling */
     font-weight: bold;
 }
 #header form #searchInput {
-		width: 270px;
+        width: 50%;
+		max-width: 270px;       
 		font-size: 0.85em;
 		border:	1px solid #9097A2;
 		background: #D9DBE1;
