@@ -19,7 +19,7 @@ height: 4em;
 
 #header h6 #mcshad {
 	/* change this to the URL of your Logo */
-    background: transparent url("http://www.worldofterra.com/uploads/mchelp.png") no-repeat;
+    background: transparent url("../../images/mchelp.png") no-repeat;
 	/* put in the width of you Logo */
 	width: 248px;
 	/* put in the height of you Logo */
