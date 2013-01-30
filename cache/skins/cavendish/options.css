@@ -5,9 +5,11 @@ This is a example options.css for the Cavendish Skin
 #header #esslogo {
 	/*background: url("../../images/c/c9/Logo.png") no-repeat scroll 0 0 transparent;*/
 	background:url('../../images/c/c9/Logo.png') no-repeat scroll 0 0 transparent;
-    width:294px;
+	width:298px;
 	height:70px;
 	margin:12px 130px 0 25px;
+	display: block;
+	font-size: 0px;
 }
 
 #header {
