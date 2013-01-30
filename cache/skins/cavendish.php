@@ -59,6 +59,7 @@ class Skincavendish extends SkinTemplate {
         $out->addScript( <<<HTML
 <!--[if lt IE 7]><script type="$wgJsMimeType" src="$path/common/IEFixes.js?$wgStyleVersion"></script>
     <meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	<!--[if gte IE 9]><style type="text/css">.gradient { filter: none; }</style><![endif]-->
 HTML
         );
     }
@@ -105,11 +106,9 @@ class cavendishTemplate extends QuickTemplate {
 		</ul>
 	</div>
 
-	<div id="header">
+	<div id="header" class="gradient">
 		<a name="top" id="contentTop"></a>
-		<h6>
         <a id="esslogo" href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a>
-        <a id="mcshad" href="http://mcserverhelp.org" title="MCserverhelp"><?php $this->text('pagetitle') ?></a></h6>
 		<ul>
     <?php        foreach($this->data['content_actions'] as $key => $tab) {
                     echo '
