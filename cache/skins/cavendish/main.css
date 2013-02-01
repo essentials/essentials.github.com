@@ -113,10 +113,10 @@ hr.hide {
 }
 
 #header li {
-    padding: 0 6px 0 0;
-    margin: 0 2px 0 0;
+    padding: 0;
+    margin: 0 6px 0 0;
     float: left;
-    background: transparent url("header_tab.gif") 100% -600px no-repeat;
+    background: none;
     border-bottom: 1px solid #515358;
     display: inline;
 	white-space: nowrap;
