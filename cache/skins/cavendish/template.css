@@ -33,11 +33,17 @@
 	#header ul a {
 		float: left;
 		display: block;
-		padding: 4px 4px 4px 10px;
-		background: transparent url("header_tab.gif") 0% -600px no-repeat;
+		padding: 4px 10px 4px 10px;
+		background: #666;
 		font-weight: bold;
 		color: #fff;
 		text-decoration: none;
+		-webkit-border-top-left-radius: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-moz-border-radius-topright: 4px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
 	}
 	#header ul li:hover a { 
 		background-position: 0% -400px; 
@@ -110,7 +116,7 @@
 		content:  url("key-point_bl.gif");
 		margin: 0 0 0 0;
 		height: 8px;
-		background: transparent url("menu_br.gif") scroll no-repeat bottom right ;
+		background: none;
 		border-top: 1px solid #fff;
 	}
 	
