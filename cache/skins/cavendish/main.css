@@ -105,7 +105,6 @@ hr.hide {
     margin: 0;
     padding: 0 15px 0 0;
     list-style: none;
-    background: url("header_br.gif") no-repeat bottom right;
     z-index: 90; /* below the H1 */
     line-height: 0.8em;
     width: auto;
@@ -1140,13 +1139,12 @@ special external link styling */
 	right: 0;
 	padding: 12px 20px 0 0;
     width: 35%;
-	background: url("header_tr.gif") no-repeat top right;
 	margin: 0; /* need for IE Mac */
 	text-align: right; /* need for IE Mac */
 	white-space: nowrap; /* for Opera */
 }
 #header form label { 
-	color: #DDD; 
+	color: #fff; 
 	font-size: 0.85em; 
 }
 #header form input { 
