@@ -89,6 +89,7 @@ height: 4em;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	border-top: 1px solid #e2e2e2;
+	border-right: 1px solid #e2e2e2;
 }
 
 .styled-button:hover{
