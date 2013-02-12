@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /w/
+Disallow: /doc/
+Disallow: /yaml/
+Disallow: /wiki/Special:Search
+Disallow: /wiki/Special:Random

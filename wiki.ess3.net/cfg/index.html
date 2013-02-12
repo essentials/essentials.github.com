@@ -1,0 +1,1429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Essentials YAML</title>
+</head>
+<body>
+<h1>Essentials Bukkit Mod</h1>
+<p>This config file is pulled from github, so should be the newest copy around. <br /> 
+<a href="https://raw.github.com/essentials/Essentials/2.9/Essentials/src/config.yml">Latest config download.</a> ::
+<a href="../mc.1.html">Colour guide.</a> ::
+<a href="https://github.com/essentials/Essentials/downloads">Latest essentials download.</a> :: 
+<a href="http://tiny.cc/EssentialsChangelog">Essentials change log.</a> :: 
+<a href="http://dl.bukkit.org/downloads/craftbukkit/list/rb/">Latest bukkit download.</a></p>
+
+<h2>Essentials' config.yml</h2>
+<p>Config file as of 0 seconds ago.</p><table class="yaml" style="font-family:monospace;"><tbody><tr class="li1"><td style="width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;"><pre style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+</pre></td><td style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><pre style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Notes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: blue;"># If you want to use special characters in this document, such as accented letters, you MUST save the file as UTF-8, not ANSI.</span>
+<span style="color: blue;"># If you receive an error when Essentials loads, ensure that:</span>
+<span style="color: blue;"># &nbsp; - No tabs are present: YAML only allows spaces</span>
+<span style="color: blue;"># &nbsp; - Indents are correct: YAML hierarchy is based entirely on indentation</span>
+<span style="color: blue;"># &nbsp; - You have &quot;escaped&quot; all apostrophes in your text: If you want to write &quot;don't&quot;, for example, write &quot;don''t&quot; instead (note the doubled apostrophe)</span>
+<span style="color: blue;"># &nbsp; - Text with symbols is enclosed in single or double quotation marks</span>
+&nbsp;
+<span style="color: blue;"># If you have problems join the Essentials help support channel: http://tiny.cc/EssentialsChat</span>
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Essentials (Global) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: blue;"># A color code between 0-9 or a-f. Set to 'none' to disable.</span>
+<span style="color: green;">ops-name-color</span><span style="font-weight: bold; color: brown;">: </span>'<span style="">4</span>'
+&nbsp;
+<span style="color: blue;"># The character(s) to prefix all nicknames, so that you know they are not true usernames.</span>
+<span style="color: green;">nickname-prefix</span><span style="font-weight: bold; color: brown;">: </span>'~'
+&nbsp;
+<span style="color: blue;"># Disable this if you have any other plugin, that modifies the displayname of a user.</span>
+<span style="color: green;">change-displayname</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># When this option is enabled, the (tab) player list will be updated with the displayname.</span>
+<span style="color: blue;"># The value of change-displayname (above) has to be true.</span>
+<span style="color: blue;">#change-playerlist: true</span>
+&nbsp;
+<span style="color: blue;"># When essentialschat.jar isnt used, force essentials to add the prefix and suffix from permission plugins to displayname</span>
+<span style="color: blue;"># This setting is ignored if essentialschat.jar is used, and defaults to 'true'</span>
+<span style="color: blue;"># The value of change-displayname (above) has to be true.</span>
+<span style="color: blue;"># Do not edit this setting unless you know what you are doing!</span>
+<span style="color: blue;">#add-prefix-suffix: false</span>
+&nbsp;
+<span style="color: blue;"># The delay, in seconds, required between /home, /tp, etc.</span>
+<span style="color: green;">teleport-cooldown</span><span style="font-weight: bold; color: brown;">: </span><span style="">0</span>
+&nbsp;
+<span style="color: blue;"># The delay, in seconds, before a user actually teleports. &nbsp;If the user moves or gets attacked in this timeframe, the teleport never occurs.</span>
+<span style="color: green;">teleport-delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">0</span>
+&nbsp;
+<span style="color: blue;"># The delay, in seconds, a player can't be attacked by other players after they have been teleported by a command</span>
+<span style="color: blue;"># This will also prevent the player attacking other players</span>
+<span style="color: green;">teleport-invulnerability</span><span style="font-weight: bold; color: brown;">: </span><span style="">4</span>
+&nbsp;
+<span style="color: blue;"># The delay, in seconds, required between /heal attempts</span>
+<span style="color: green;">heal-cooldown</span><span style="font-weight: bold; color: brown;">: </span><span style="">60</span>
+&nbsp;
+<span style="color: blue;"># What to prevent from /i /give</span>
+<span style="color: blue;"># e.g item-spawn-blacklist: 46,11,10</span>
+<span style="color: #007F45;">item-spawn-blacklist</span><span style="font-weight: bold; color: brown;">:
+</span>
+<span style="color: blue;"># Set this to true if you want permission based item spawn rules</span>
+<span style="color: blue;"># Note: The blacklist above will be ignored then.</span>
+<span style="color: blue;"># Permissions:</span>
+<span style="color: blue;"># &nbsp;- essentials.itemspawn.item-all</span>
+<span style="color: blue;"># &nbsp;- essentials.itemspawn.item-[itemname]</span>
+<span style="color: blue;"># &nbsp;- essentials.itemspawn.item-[itemid]</span>
+<span style="color: blue;"># &nbsp;- essentials.give.item-all</span>
+<span style="color: blue;"># &nbsp;- essentials.give.item-[itemname]</span>
+<span style="color: blue;"># &nbsp;- essentials.give.item-[itemid]</span>
+<span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/Command_Reference/ICheat#Item.2FGive</span>
+<span style="color: green;">permission-based-item-spawn</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># Mob limit on the /spawnmob command per execution</span>
+<span style="color: green;">spawnmob-limit</span><span style="font-weight: bold; color: brown;">: </span><span style="">10</span>
+&nbsp;
+<span style="color: blue;"># Shall we notify users when using /lightning</span>
+<span style="color: green;">warn-on-smite</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># motd and rules are now configured in the files motd.txt and rules.txt</span>
+&nbsp;
+<span style="color: blue;"># When a command conflicts with another plugin, by default, Essentials will try to force the OTHER plugin to take priority.</span>
+<span style="color: blue;"># Commands in this list, will tell Essentials to 'not give up' the command to other plugins.</span>
+<span style="color: blue;"># In this state, which plugin 'wins' appears to be almost random.</span>
+<span style="color: blue;"># </span>
+<span style="color: blue;"># If you have two plugin with the same command and you wish to force Essentials to take over, you need an alias.</span>
+<span style="color: blue;"># To force essentials to take 'god' alias 'god' to 'egod'.</span>
+<span style="color: blue;"># See http://wiki.bukkit.org/Bukkit.yml#aliases for more information</span>
+&nbsp;
+<span style="color: #007F45;">overridden-commands</span><span style="font-weight: bold; color: brown;">:
+</span><span style="color: blue;"># &nbsp;- god</span>
+&nbsp;
+<span style="color: blue;"># Disabled commands will be completely unavailable on the server.</span>
+<span style="color: blue;"># Disabling commands here will have no effect on command conflicts.</span>
+<span style="color: #007F45;">disabled-commands</span><span style="font-weight: bold; color: brown;">:
+</span><span style="color: blue;"># &nbsp;- nick</span>
+&nbsp;
+<span style="color: blue;"># These commands will be shown to players with socialSpy enabled</span>
+<span style="color: blue;"># You can add commands from other plugins you may want to track or </span>
+<span style="color: blue;"># remove commands that are used for something you dont want to spy on</span>
+<span style="color: #007F45;">socialspy-commands</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;- msg
+&nbsp; - w
+&nbsp; - r
+&nbsp; - mail
+&nbsp; - m
+&nbsp; - t
+&nbsp; - whisper
+&nbsp; - emsg
+&nbsp; - tell
+&nbsp; - er
+&nbsp; - reply
+&nbsp; - ereply
+&nbsp; - email
+&nbsp; - action
+&nbsp; - describe
+&nbsp; - eme
+&nbsp; - eaction
+&nbsp; - edescribe
+&nbsp; - etell
+&nbsp; - ewhisper
+&nbsp; - pm
+&nbsp;
+<span style="color: blue;"># If you do not wish to use a permission system, you can define a list of 'player perms' below.</span>
+<span style="color: blue;"># This list has no effect if you are using a supported permissions system.</span>
+<span style="color: blue;"># If you are using an unsupported permissions system simply delete this section.</span>
+<span style="color: blue;"># Whitelist the commands and permissions you wish to give players by default (everything else is op only).</span>
+<span style="color: blue;"># These are the permissions without the &quot;essentials.&quot; part.</span>
+<span style="color: #007F45;">player-commands</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;- afk
+&nbsp; - afk.auto
+&nbsp; - back
+&nbsp; - back.ondeath
+&nbsp; - balance
+&nbsp; - balance.others
+&nbsp; - balancetop
+&nbsp; - build
+&nbsp; - chat.color
+&nbsp; - chat.format
+&nbsp; - chat.shout
+&nbsp; - chat.question
+&nbsp; - clearinventory
+&nbsp; - compass
+&nbsp; - depth
+&nbsp; - delhome
+&nbsp; - getpos
+&nbsp; - geoip.show
+&nbsp; - help
+&nbsp; - helpop
+&nbsp; - home
+&nbsp; - home.others
+&nbsp; - ignore
+&nbsp; - info
+&nbsp; - itemdb
+&nbsp; - kit
+&nbsp; - kits.tools
+&nbsp; - list
+&nbsp; - mail
+&nbsp; - mail.send
+&nbsp; - me
+&nbsp; - motd
+&nbsp; - msg
+&nbsp; - msg.color
+&nbsp; - nick
+&nbsp; - near
+&nbsp; - pay
+&nbsp; - ping
+&nbsp; - protect
+&nbsp; - r
+&nbsp; - rules
+&nbsp; - realname
+&nbsp; - seen
+&nbsp; - sell
+&nbsp; - sethome
+&nbsp; - setxmpp
+&nbsp; - signs.create.protection
+&nbsp; - signs.create.trade
+&nbsp; - signs.break.protection
+&nbsp; - signs.break.trade
+&nbsp; - signs.use.balance
+&nbsp; - signs.use.buy
+&nbsp; - signs.use.disposal
+&nbsp; - signs.use.enchant
+&nbsp; - signs.use.free
+&nbsp; - signs.use.gamemode
+&nbsp; - signs.use.heal
+&nbsp; - signs.use.info
+&nbsp; - signs.use.kit
+&nbsp; - signs.use.mail
+&nbsp; - signs.use.protection
+&nbsp; - signs.use.repair
+&nbsp; - signs.use.sell
+&nbsp; - signs.use.time
+&nbsp; - signs.use.trade
+&nbsp; - signs.use.warp
+&nbsp; - signs.use.weather
+&nbsp; - spawn
+&nbsp; - suicide
+&nbsp; - time
+&nbsp; - tpa
+&nbsp; - tpaccept
+&nbsp; - tpahere
+&nbsp; - tpdeny
+&nbsp; - warp
+&nbsp; - warp.list
+&nbsp; - world
+&nbsp; - worth
+&nbsp; - xmpp
+&nbsp;
+<span style="color: blue;"># Note: All items MUST be followed by a quantity!</span>
+<span style="color: blue;"># All kit names should be lower case, and will be treated as lower in permissions/costs.</span>
+<span style="color: blue;"># Syntax: - itemID[:DataValue/Durability] Amount [Enchantment:Level].. [itemmeta:value]...</span>
+<span style="color: blue;"># For Item meta information visit http://wiki.ess3.net/wiki/Item_Meta</span>
+<span style="color: blue;"># 'delay' refers to the cooldown between how often you can use each kit, measured in seconds.</span>
+<span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/Kits</span>
+<span style="color: #007F45;">kits</span>:
+<span style="color: #007F45;">&nbsp; tools</span>:
+<span style="color: green;">&nbsp; &nbsp; delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">10</span>
+<span style="color: #007F45;">&nbsp; &nbsp; items</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp; &nbsp;- <span style="">272</span> <span style="">1</span>
+&nbsp; &nbsp; &nbsp; - <span style="">273</span> <span style="">1</span>
+&nbsp; &nbsp; &nbsp; - <span style="">274</span> <span style="">1</span>
+&nbsp; &nbsp; &nbsp; - <span style="">275</span> <span style="">1</span>
+<span style="color: #007F45;">&nbsp; dtools</span>:
+<span style="color: green;">&nbsp; &nbsp; delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">600</span>
+<span style="color: #007F45;">&nbsp; &nbsp; items</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp; &nbsp;- <span style="">278</span> <span style="">1</span> efficiency:<span style="">1</span> durability:<span style="">1</span> fortune:<span style="">1</span> name:&amp;4Gigadrill lore:The_drill_that_&amp;npierces|the_heavens
+&nbsp; &nbsp; &nbsp; - <span style="">277</span> <span style="">1</span> digspeed:<span style="">3</span> name:Dwarf lore:Diggy|Diggy|Hole
+&nbsp; &nbsp; &nbsp; - <span style="">298</span> <span style="">1</span> color:<span style="">255</span>,<span style="">255</span>,<span style="">255</span> name:Top_Hat lore:Good_day,_Good_day
+&nbsp; &nbsp; &nbsp; - <span style="">279</span>:<span style="">780</span> <span style="">1</span>
+<span style="color: #007F45;">&nbsp; notch</span>:
+<span style="color: green;">&nbsp; &nbsp; delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">6000</span>
+<span style="color: #007F45;">&nbsp; &nbsp; items</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp; &nbsp;- <span style="">397</span>:<span style="">3</span> <span style="">1</span> player:Notch
+<span style="color: #007F45;">&nbsp; color</span>:
+<span style="color: green;">&nbsp; &nbsp; delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">6000</span>
+<span style="color: #007F45;">&nbsp; &nbsp; items</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp; &nbsp;- <span style="">387</span> <span style="">1</span> title:&amp;4Book_&amp;9o_&amp;6Colors author:KHobbits lore:Ingame_color_codes book:Colors
+<span style="color: #007F45;">&nbsp; firework</span>:
+<span style="color: green;">&nbsp; &nbsp; delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">6000</span>
+<span style="color: #007F45;">&nbsp; &nbsp; items</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp; &nbsp;- <span style="">401</span> <span style="">1</span> name:Angry_Creeper color:red fade:green type:creeper power:<span style="">1</span>
+&nbsp; &nbsp; &nbsp; - <span style="">401</span> <span style="">1</span> name:StarryNight color:yellow,orange fade:blue type:star effect:trail,twinkle power:<span style="">1</span>
+&nbsp; &nbsp; &nbsp; - <span style="">401</span> <span style="">2</span> name:SolarWind color:yellow,orange fade:red shape:large effect:twinkle color:yellow,orange fade:red shape:ball effect:trail color:red,purple fade:pink shape:star effect:trail power:<span style="">1</span>
+&nbsp;
+<span style="color: blue;"># Essentials Sign Control</span>
+<span style="color: blue;"># See http://wiki.ess3.net/wiki/Sign_Tutorial for instructions on how to use these.</span>
+<span style="color: blue;"># To enable signs, remove # symbol. To disable all signs, comment/remove each sign.</span>
+<span style="color: blue;"># Essentials Colored sign support will be enabled when any sign types are enabled.</span>
+<span style="color: blue;"># Color is not an actual sign, it's for enabling using color codes on signs, when the correct permissions are given.</span>
+&nbsp;
+<span style="color: #007F45;">enabledSigns</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;">#- color</span>
+&nbsp; <span style="color: blue;">#- balance</span>
+&nbsp; <span style="color: blue;">#- buy</span>
+&nbsp; <span style="color: blue;">#- sell</span>
+&nbsp; <span style="color: blue;">#- trade</span>
+&nbsp; <span style="color: blue;">#- free</span>
+&nbsp; <span style="color: blue;">#- disposal</span>
+&nbsp; <span style="color: blue;">#- warp</span>
+&nbsp; <span style="color: blue;">#- kit</span>
+&nbsp; <span style="color: blue;">#- mail</span>
+&nbsp; <span style="color: blue;">#- enchant</span>
+&nbsp; <span style="color: blue;">#- gamemode</span>
+&nbsp; <span style="color: blue;">#- heal</span>
+&nbsp; <span style="color: blue;">#- info</span>
+&nbsp; <span style="color: blue;">#- spawnmob</span>
+&nbsp; <span style="color: blue;">#- repair</span>
+&nbsp; <span style="color: blue;">#- time</span>
+&nbsp; <span style="color: blue;">#- weather</span>
+&nbsp; 
+<span style="color: blue;"># How many times per second can Essentials signs be interacted with per player.</span>
+<span style="color: blue;"># Values should be between 1-20, 20 being virtually no lag protection.</span>
+<span style="color: blue;"># Lower numbers will reduce the possibility of lag, but may annoy players.</span>
+<span style="color: green;">sign-use-per-second</span><span style="font-weight: bold; color: brown;">: </span><span style="">4</span>
+&nbsp;
+<span style="color: blue;"># Backup runs a batch/bash command while saving is disabled</span>
+<span style="color: #007F45;">backup</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;"># Interval in minutes</span>
+<span style="color: green;">&nbsp; interval</span><span style="font-weight: bold; color: brown;">: </span><span style="">30</span>
+&nbsp; <span style="color: blue;"># Unless you add a valid backup command or script here, this feature will be useless.</span>
+&nbsp; <span style="color: blue;"># Use 'save-all' to simply force regular world saving without backup.</span>
+&nbsp; <span style="color: blue;">#command: 'rdiff-backup World1 backups/World1'</span>
+&nbsp;
+<span style="color: blue;"># Set this true to enable permission per warp.</span>
+<span style="color: green;">per-warp-permission</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># Sort output of /list command by groups</span>
+<span style="color: green;">sort-list-by-groups</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># More output to the console</span>
+<span style="color: green;">debug</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># Set the locale for all messages</span>
+<span style="color: blue;"># If you don't set this, the default locale of the server will be used.</span>
+<span style="color: blue;"># For example, to set language to English, set locale to en, to use the file &quot;messages_en.properties&quot;</span>
+<span style="color: blue;"># Don't forget to remove the # in front of the line</span>
+<span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/Locale</span>
+<span style="color: blue;">#locale: en</span>
+&nbsp;
+<span style="color: blue;"># Turn off god mode when people exit</span>
+<span style="color: green;">remove-god-on-disconnect</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># Auto-AFK</span>
+<span style="color: blue;"># After this timeout in seconds, the user will be set as afk.</span>
+<span style="color: blue;"># This feature requires the player to have essentials.auto.afk node</span>
+<span style="color: blue;"># Set to -1 for no timeout.</span>
+<span style="color: green;">auto-afk</span><span style="font-weight: bold; color: brown;">: </span><span style="">300</span>
+&nbsp;
+<span style="color: blue;"># Auto-AFK Kick</span>
+<span style="color: blue;"># After this timeout in seconds, the user will be kicked from the server.</span>
+<span style="color: blue;"># essentials.afk.kickexempt node overrides this feature</span>
+<span style="color: blue;"># Set to -1 for no timeout.</span>
+<span style="color: green;">auto-afk-kick</span><span style="font-weight: bold; color: brown;">: </span>-<span style="">1</span>
+&nbsp;
+<span style="color: blue;"># Set this to true, if you want to freeze the player, if he is afk.</span>
+<span style="color: blue;"># Other players or monsters can't push him out of afk mode then.</span>
+<span style="color: blue;"># This will also enable temporary god mode for the afk player.</span>
+<span style="color: blue;"># The player has to use the command /afk to leave the afk mode.</span>
+<span style="color: green;">freeze-afk-players</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># When the player is afk, should he be able to pickup items?</span>
+<span style="color: blue;"># Enable this, when you don't want people idling in mob traps.</span>
+<span style="color: green;">disable-item-pickup-while-afk</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># This setting controls if a player is marked as active on interaction.</span>
+<span style="color: blue;"># When this setting is false, you will need to manually un-AFK using the /afk command.</span>
+<span style="color: green;">cancel-afk-on-interact</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># Should we automatically remove afk status when the player moves?</span>
+<span style="color: blue;"># Player will be removed from AFK on chat/command regardless of this setting.</span>
+<span style="color: blue;"># Disable this to reduce server lag.</span>
+<span style="color: green;">cancel-afk-on-move</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># You can disable the death messages of Minecraft here</span>
+<span style="color: green;">death-messages</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># Add worlds to this list, if you want to automatically disable god mode there</span>
+<span style="color: #007F45;">no-god-in-worlds</span><span style="font-weight: bold; color: brown;">:
+</span><span style="color: blue;"># &nbsp;- world_nether</span>
+&nbsp;
+<span style="color: blue;"># Set to true to enable per-world permissions for teleporting between worlds with essentials commands</span>
+<span style="color: blue;"># This applies to /world, /back, /tp[a|o][here|all], but not warps.</span>
+<span style="color: blue;"># Give someone permission to teleport to a world with essentials.worlds.&lt;worldname&gt;</span>
+<span style="color: blue;"># This does not affect the /home command, there is a separate toggle below for this.</span>
+<span style="color: green;">world-teleport-permissions</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># The number of items given if the quantity parameter is left out in /item or /give.</span>
+<span style="color: blue;"># If this number is below 1, the maximum stack size size is given. If over-sized stacks</span>
+<span style="color: blue;"># are not enabled, any number higher than the maximum stack size results in more than one stack.</span>
+<span style="color: green;">default-stack-size</span><span style="font-weight: bold; color: brown;">: </span>-<span style="">1</span>
+&nbsp;
+<span style="color: blue;"># Over-sized stacks are stacks that ignore the normal max stack size.</span>
+<span style="color: blue;"># They can be obtained using /give and /item, if the player has essentials.oversizedstacks permission.</span>
+<span style="color: blue;"># How many items should be in an over-sized stack?</span>
+<span style="color: green;">oversized-stacksize</span><span style="font-weight: bold; color: brown;">: </span><span style="">64</span>
+&nbsp;
+<span style="color: blue;"># Allow repair of enchanted weapons and armor.</span>
+<span style="color: blue;"># If you set this to false, you can still allow it for certain players using the permission</span>
+<span style="color: blue;"># essentials.repair.enchanted</span>
+<span style="color: green;">repair-enchanted</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># Allow 'unsafe' enchantments in kits and item spawning.</span>
+<span style="color: blue;"># Warning: Mixing and overleveling some enchantments can cause issues with clients, servers and plugins.</span>
+<span style="color: green;">unsafe-enchantments</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;">#Do you want essentials to keep track of previous location for /back in the teleport listener?</span>
+<span style="color: blue;">#If you set this to true any plugin that uses teleport will have the previous location registered.</span>
+<span style="color: green;">register-back-in-listener</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;">#Delay to wait before people can cause attack damage after logging in </span>
+<span style="color: green;">login-attack-delay</span><span style="font-weight: bold; color: brown;">: </span><span style="">5</span>
+&nbsp;
+<span style="color: blue;">#Set the max fly speed, values range from 0.1 to 1.0</span>
+<span style="color: green;">max-fly-speed</span><span style="font-weight: bold; color: brown;">: </span><span style="">0.8</span>
+&nbsp;
+<span style="color: blue;">#Set the maximum amount of mail that can be sent within a minute.</span>
+<span style="color: green;">mails-per-minute</span><span style="font-weight: bold; color: brown;">: </span><span style="">1000</span>
+&nbsp;
+<span style="color: blue;"># Set the maximum time /tempban can be used for in seconds.</span>
+<span style="color: blue;"># Set to -1 to disable, and essentials.tempban.unlimited can be used to override.</span>
+<span style="color: green;">max-tempban-time</span><span style="font-weight: bold; color: brown;">: </span>-<span style="">1</span>
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EssentialsHome &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: blue;"># Allows people to set their bed at daytime</span>
+<span style="color: green;">update-bed-at-daytime</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># Set to true to enable per-world permissions for using homes to teleport between worlds</span>
+<span style="color: blue;"># This applies to the /home only.</span>
+<span style="color: blue;"># Give someone permission to teleport to a world with essentials.worlds.&lt;worldname&gt;</span>
+<span style="color: green;">world-home-permissions</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># Allow players to have multiple homes.</span>
+<span style="color: blue;"># Players need essentials.sethome.multiple before they can have more than 1 home, defaults to 'default' below.</span>
+<span style="color: blue;"># Define different amounts of multiple homes for different permissions, e.g. essentials.sethome.multiple.vip</span>
+<span style="color: blue;"># People with essentials.sethome.multiple.unlimited are not limited by these numbers.</span>
+<span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/Multihome</span>
+<span style="color: green;">sethome-multiple</span><span style="font-weight: bold; color: brown;">: </span> 
+<span style="color: green;">&nbsp; default</span><span style="font-weight: bold; color: brown;">: </span><span style="">3</span>
+&nbsp; <span style="color: blue;"># essentials.sethome.multiple.vip</span>
+<span style="color: green;">&nbsp; vip</span><span style="font-weight: bold; color: brown;">: </span><span style="">5</span>
+&nbsp; <span style="color: blue;"># essentials.sethome.multiple.staff</span>
+<span style="color: green;">&nbsp; staff</span><span style="font-weight: bold; color: brown;">: </span><span style="">10</span>
+&nbsp;
+<span style="color: blue;"># Set timeout in seconds for players to accept tpa before request is cancelled.</span>
+<span style="color: blue;"># Set to 0 for no timeout</span>
+<span style="color: green;">tpa-accept-cancellation</span><span style="font-weight: bold; color: brown;">: </span><span style="">120</span>
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EssentialsEco &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/Essentials_Economy</span>
+&nbsp;
+<span style="color: blue;"># Defines the balance with which new players begin. &nbsp;Defaults to 0.</span>
+<span style="color: green;">starting-balance</span><span style="font-weight: bold; color: brown;">: </span><span style="">0</span>
+&nbsp;
+<span style="color: blue;"># worth-# defines the value of an item when it is sold to the server via /sell.</span>
+<span style="color: blue;"># These are now defined in worth.yml</span>
+&nbsp;
+<span style="color: blue;"># Defines the cost to use the given commands PER USE</span>
+<span style="color: blue;"># Some commands like /repair have sub-costs, check the wiki for more information.</span>
+<span style="color: #007F45;">command-costs</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;"># /example costs $1000 PER USE</span>
+&nbsp; <span style="color: blue;">#example: 1000</span>
+&nbsp; <span style="color: blue;"># /kit tools costs $1500 PER USE</span>
+&nbsp; <span style="color: blue;">#kit-tools: 1500</span>
+&nbsp;
+<span style="color: blue;"># Set this to a currency symbol you want to use.</span>
+<span style="color: green;">currency-symbol</span><span style="font-weight: bold; color: brown;">: </span>'$'
+&nbsp;
+<span style="color: blue;"># Set the maximum amount of money a player can have</span>
+<span style="color: blue;"># The amount is always limited to 10 trillion because of the limitations of a java double</span>
+<span style="color: green;">max-money</span><span style="font-weight: bold; color: brown;">: </span><span style="">10000000000000</span>
+&nbsp;
+<span style="color: blue;"># Set the minimum amount of money a player can have (must be above the negative of max-money).</span>
+<span style="color: blue;"># Setting this to 0, will disable overdrafts/loans completely. &nbsp;Users need 'essentials.eco.loan' perm to go below 0.</span>
+<span style="color: green;">min-money</span><span style="font-weight: bold; color: brown;">: </span>-<span style="">10000</span>
+&nbsp;
+<span style="color: blue;"># Enable this to log all interactions with trade/buy/sell signs and sell command</span>
+<span style="color: green;">economy-log-enabled</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EssentialsHelp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: blue;"># Show other plugins commands in help</span>
+<span style="color: green;">non-ess-in-help</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;"># Hide plugins which do not give a permission</span>
+<span style="color: blue;"># You can override a true value here for a single plugin by adding a permission to a user/group.</span>
+<span style="color: blue;"># The individual permission is: essentials.help.&lt;plugin&gt;, anyone with essentials.* or '*' will see all help regardless.</span>
+<span style="color: blue;"># You can use negative permissions to remove access to just a single plugins help if the following is enabled.</span>
+<span style="color: green;">hide-permissionless-help</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EssentialsChat &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: #007F45;">chat</span><span style="font-weight: bold; color: brown;">:
+</span>
+&nbsp; <span style="color: blue;"># If EssentialsChat is installed, this will define how far a player's voice travels, in blocks. &nbsp;Set to 0 to make all chat global.</span>
+&nbsp; <span style="color: blue;"># Note that users with the &quot;essentials.chat.spy&quot; permission will hear everything, regardless of this setting.</span>
+&nbsp; <span style="color: blue;"># Users with essentials.chat.shout can override this by prefixing text with an exclamation mark (!)</span>
+&nbsp; <span style="color: blue;"># Users with essentials.chat.question can override this by prefixing text with a question mark (?)</span>
+&nbsp; <span style="color: blue;"># You can add command costs for shout/question by adding chat-shout and chat-question to the command costs section.&quot;</span>
+<span style="color: green;">&nbsp; radius</span><span style="font-weight: bold; color: brown;">: </span><span style="">0</span>
+&nbsp;
+&nbsp; <span style="color: blue;"># Chat formatting can be done in two ways, you can either define a standard format for all chat</span>
+&nbsp; <span style="color: blue;"># Or you can give a group specific chat format, to give some extra variation.</span>
+&nbsp; <span style="color: blue;"># If set to the default chat format which &quot;should&quot; be compatible with ichat.</span>
+&nbsp; <span style="color: blue;"># For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting &nbsp;</span>
+&nbsp;
+<span style="color: green;">&nbsp; format</span><span style="font-weight: bold; color: brown;">: </span>'&lt;<span class="br0">&#123;</span>DISPLAYNAME<span class="br0">&#125;</span>&gt; <span class="br0">&#123;</span>MESSAGE<span class="br0">&#125;</span>'
+&nbsp; <span style="color: blue;">#format: '&amp;7[{GROUP}]&amp;r {DISPLAYNAME}&amp;7:&amp;r {MESSAGE}'</span>
+&nbsp;
+<span style="color: #007F45;">&nbsp; group-formats</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;"># &nbsp;Default: '{WORLDNAME} {DISPLAYNAME}&amp;7:&amp;r {MESSAGE}'</span>
+&nbsp; <span style="color: blue;"># &nbsp;Admins: '{WORLDNAME} &amp;c[{GROUP}]&amp;r {DISPLAYNAME}&amp;7:&amp;c {MESSAGE}'</span>
+&nbsp;
+&nbsp; <span style="color: blue;"># If you are using group formats make sure to remove the '#' to allow the setting to be read.</span>
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; EssentialsProtect &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: #007F45;">protect</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;"># Database settings for sign/rail protection</span>
+&nbsp;
+&nbsp; <span style="color: blue;"># mysql or sqlite</span>
+&nbsp; <span style="color: blue;"># We strongly recommend against using mysql here, unless you have a good reason.</span>
+&nbsp; <span style="color: blue;"># Sqlite seems to be faster in almost all cases, and in some cases mysql can be much slower.</span>
+<span style="color: green;">&nbsp; datatype</span><span style="font-weight: bold; color: brown;">: </span>'sqlite'
+&nbsp;
+&nbsp; <span style="color: blue;"># If you specified MySQL above, you MUST enter the appropriate details here.</span>
+&nbsp; <span style="color: blue;"># If you specified SQLite above, these will be IGNORED.</span>
+<span style="color: green;">&nbsp; username</span><span style="font-weight: bold; color: brown;">: </span>'root'
+<span style="color: green;">&nbsp; password</span><span style="font-weight: bold; color: brown;">: </span>'root'
+<span style="color: green;">&nbsp; mysqlDb</span><span style="font-weight: bold; color: brown;">: </span>'jdbc:mysql://localhost:<span style="">3306</span>/minecraft'
+&nbsp;
+&nbsp; <span style="color: blue;"># General physics/behavior modifications</span>
+<span style="color: #007F45;">&nbsp; prevent</span>:
+<span style="color: green;">&nbsp; &nbsp; lava-flow</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; water-flow</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; water-bucket-flow</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; fire-spread</span><span style="font-weight: bold; color: brown;">: </span>true
+<span style="color: green;">&nbsp; &nbsp; lava-fire-spread</span><span style="font-weight: bold; color: brown;">: </span>true
+<span style="color: green;">&nbsp; &nbsp; flint-fire</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; lightning-fire-spread</span><span style="font-weight: bold; color: brown;">: </span>true
+<span style="color: green;">&nbsp; &nbsp; portal-creation</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; tnt-explosion</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; tnt-playerdamage</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; fireball-explosion</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; fireball-fire</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; fireball-playerdamage</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; witherskull-explosion</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; witherskull-playerdamage</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; wither-spawnexplosion</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; wither-blockreplace</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; creeper-explosion</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; creeper-playerdamage</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; creeper-blockdamage</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; enderdragon-blockdamage</span><span style="font-weight: bold; color: brown;">: </span>true
+<span style="color: green;">&nbsp; &nbsp; enderman-pickup</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; villager-death</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp; &nbsp; <span style="color: blue;"># Monsters won't follow players</span>
+&nbsp; &nbsp; <span style="color: blue;"># permission essentials.protect.entitytarget.bypass disables this</span>
+<span style="color: green;">&nbsp; &nbsp; entitytarget</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp; &nbsp; <span style="color: blue;"># Prevent the spawning of creatures</span>
+<span style="color: #007F45;">&nbsp; &nbsp; spawn</span>:
+<span style="color: green;">&nbsp; &nbsp; &nbsp; creeper</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; skeleton</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; spider</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; giant</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; zombie</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; slime</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; ghast</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; pig_zombie</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; enderman</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; cave_spider</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; silverfish</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; blaze</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; magma_cube</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; ender_dragon</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; pig</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; sheep</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; cow</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; chicken</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; squid</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; wolf</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; mushroom_cow</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; snowman</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; ocelot</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; iron_golem</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; villager</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; wither</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; bat</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; witch</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp; &nbsp; &nbsp; 
+&nbsp; <span style="color: blue;"># Maximum height the creeper should explode. -1 allows them to explode everywhere.</span>
+&nbsp; <span style="color: blue;"># Set prevent.creeper-explosion to true, if you want to disable creeper explosions.</span>
+<span style="color: #007F45;">&nbsp; creeper</span>:
+<span style="color: green;">&nbsp; &nbsp; max-height</span><span style="font-weight: bold; color: brown;">: </span>-<span style="">1</span>
+&nbsp;
+&nbsp; <span style="color: blue;"># Protect various blocks.</span>
+<span style="color: #007F45;">&nbsp; protect</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp;<span style="color: blue;"># Protect all signs</span>
+<span style="color: green;">&nbsp; &nbsp; signs</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Prevent users from destroying rails</span>
+<span style="color: green;">&nbsp; &nbsp; rails</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Blocks below rails/signs are also protected if the respective rail/sign is protected.</span>
+&nbsp; &nbsp; <span style="color: blue;"># This makes it more difficult to circumvent protection, and should be enabled.</span>
+&nbsp; &nbsp; <span style="color: blue;"># This only has an effect if &quot;rails&quot; or &quot;signs&quot; is also enabled.</span>
+<span style="color: green;">&nbsp; &nbsp; block-below</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Prevent placing blocks above protected rails, this is to stop a potential griefing</span>
+<span style="color: green;">&nbsp; &nbsp; prevent-block-on-rails</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Store blocks / signs in memory before writing</span>
+<span style="color: green;">&nbsp; &nbsp; memstore</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; <span style="color: blue;"># Disable various default physics and behaviors</span>
+<span style="color: #007F45;">&nbsp; disable</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp; &nbsp;<span style="color: blue;"># Should fall damage be disabled?</span>
+<span style="color: green;">&nbsp; &nbsp; fall</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Users with the essentials.protect.pvp permission will still be able to attack each other if this is set to true.</span>
+&nbsp; &nbsp; <span style="color: blue;"># They will be unable to attack users without that same permission node.</span>
+<span style="color: green;">&nbsp; &nbsp; pvp</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should drowning damage be disabled?</span>
+&nbsp; &nbsp; <span style="color: blue;"># (Split into two behaviors; generally, you want both set to the same value)</span>
+<span style="color: green;">&nbsp; &nbsp; drown</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; suffocate</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should damage via lava be disabled? &nbsp;Items that fall into lava will still burn to a crisp. ;)</span>
+<span style="color: green;">&nbsp; &nbsp; lavadmg</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should arrow damage be disabled</span>
+<span style="color: green;">&nbsp; &nbsp; projectiles</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># This will disable damage from touching cacti.</span>
+<span style="color: green;">&nbsp; &nbsp; contactdmg</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Burn, baby, burn! &nbsp;Should fire damage be disabled?</span>
+<span style="color: green;">&nbsp; &nbsp; firedmg</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should the damage after hit by a lightning be disabled?</span>
+<span style="color: green;">&nbsp; &nbsp; lightning</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp; &nbsp; 
+&nbsp; &nbsp; <span style="color: blue;"># Should Wither damage be disabled?</span>
+<span style="color: green;">&nbsp; &nbsp; wither</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Disable weather options</span>
+<span style="color: #007F45;">&nbsp; &nbsp; weather</span>:
+<span style="color: green;">&nbsp; &nbsp; &nbsp; storm</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; thunder</span><span style="font-weight: bold; color: brown;">: </span>false
+<span style="color: green;">&nbsp; &nbsp; &nbsp; lightning</span><span style="font-weight: bold; color: brown;">: </span>false &nbsp; &nbsp; 
+&nbsp;
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;EssentialsAntiBuild &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+&nbsp; <span style="color: blue;"># Disable various default physics and behaviors</span>
+&nbsp; <span style="color: blue;"># For more information, visit http://wiki.ess3.net/wiki/AntiBuild</span>
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should people with build: false in permissions be allowed to build</span>
+&nbsp; &nbsp; <span style="color: blue;"># Set true to disable building for those people</span>
+&nbsp; &nbsp; <span style="color: blue;"># Setting to false means EssentialsAntiBuild will never prevent you from building</span>
+<span style="color: green;">&nbsp; &nbsp; build</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should people with build: false in permissions be allowed to use items</span>
+&nbsp; &nbsp; <span style="color: blue;"># Set true to disable using for those people</span>
+&nbsp; &nbsp; <span style="color: blue;"># Setting to false means EssentialsAntiBuild will never prevent you from using</span>
+<span style="color: green;">&nbsp; &nbsp; use</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Should we tell people they are not allowed to build</span>
+<span style="color: green;">&nbsp; &nbsp; warn-on-build-disallow</span><span style="font-weight: bold; color: brown;">: </span>true
+&nbsp;
+&nbsp; <span style="color: blue;"># For which block types would you like to be alerted?</span>
+&nbsp; <span style="color: blue;"># You can find a list of IDs in plugins/Essentials/items.csv after loading Essentials for the first time.</span>
+&nbsp; <span style="color: blue;"># 10 = lava :: 11 = still lava :: 46 = TNT :: 327 = lava bucket</span>
+<span style="color: #007F45;">&nbsp; alert</span>:
+<span style="color: green;">&nbsp; &nbsp; on-placement</span><span style="font-weight: bold; color: brown;">: </span><span style="">10</span>,<span style="">11</span>,<span style="">46</span>,<span style="">327</span>
+<span style="color: green;">&nbsp; &nbsp; on-use</span><span style="font-weight: bold; color: brown;">: </span><span style="">327</span>
+<span style="color: #007F45;">&nbsp; &nbsp; on-break</span><span style="font-weight: bold; color: brown;">:
+</span>
+<span style="color: #007F45;">&nbsp; blacklist</span><span style="font-weight: bold; color: brown;">:
+</span>
+&nbsp; &nbsp; <span style="color: blue;"># Which blocks should people be prevented from placing</span>
+<span style="color: green;">&nbsp; &nbsp; placement</span><span style="font-weight: bold; color: brown;">: </span><span style="">10</span>,<span style="">11</span>,<span style="">46</span>,<span style="">327</span>
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Which items should people be prevented from using</span>
+<span style="color: green;">&nbsp; &nbsp; usage</span><span style="font-weight: bold; color: brown;">: </span><span style="">327</span>
+&nbsp;
+&nbsp; &nbsp; <span style="color: blue;"># Which blocks should people be prevented from breaking</span>
+<span style="color: #007F45;">&nbsp; &nbsp; break</span><span style="font-weight: bold; color: brown;">:
+</span>
+&nbsp; &nbsp; <span style="color: blue;"># Which blocks should not be pushed by pistons</span>
+<span style="color: #007F45;">&nbsp; &nbsp; piston</span><span style="font-weight: bold; color: brown;">:
+</span>
+<span style="color: blue;">############################################################</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;"># | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Essentials Spawn / New Players &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #</span>
+<span style="color: blue;"># +------------------------------------------------------+ #</span>
+<span style="color: blue;">############################################################</span>
+&nbsp;
+<span style="color: #007F45;">newbies</span><span style="font-weight: bold; color: brown;">:
+</span> &nbsp;<span style="color: blue;"># Should we announce to the server when someone logs in for the first time?</span>
+&nbsp; <span style="color: blue;"># If so, use this format, replacing {DISPLAYNAME} with the player name.</span>
+&nbsp; <span style="color: blue;"># If not, set to ''</span>
+&nbsp; <span style="color: blue;">#announce-format: ''</span>
+<span style="color: green;">&nbsp; announce-format</span><span style="font-weight: bold; color: brown;">: </span>'&amp;dWelcome <span class="br0">&#123;</span>DISPLAYNAME<span class="br0">&#125;</span>&amp;d to the server!'
+&nbsp;
+&nbsp; <span style="color: blue;"># When we spawn for the first time, which spawnpoint do we use?</span>
+&nbsp; <span style="color: blue;"># Set to &quot;none&quot; if you want to use the spawn point of the world.</span>
+<span style="color: green;">&nbsp; spawnpoint</span><span style="font-weight: bold; color: brown;">: </span>newbies
+&nbsp;
+&nbsp; <span style="color: blue;"># Do we want to give users anything on first join? Set to '' to disable</span>
+&nbsp; <span style="color: blue;"># This kit will be given regardless &nbsp;of cost, and permissions.</span>
+&nbsp; <span style="color: blue;">#kit: ''</span>
+<span style="color: green;">&nbsp; kit</span><span style="font-weight: bold; color: brown;">: </span>tools
+&nbsp;
+<span style="color: blue;"># Set this to lowest, if you want Multiverse to handle the respawning</span>
+<span style="color: blue;"># Set this to high, if you want EssentialsSpawn to handle the respawning</span>
+<span style="color: blue;"># Set this to highest, if you want to force EssentialsSpawn to handle the respawning</span>
+<span style="color: green;">respawn-listener-priority</span><span style="font-weight: bold; color: brown;">: </span>high
+&nbsp;
+<span style="color: blue;"># When users die, should they respawn at their first home or bed, instead of the spawnpoint?</span>
+<span style="color: green;">respawn-at-home</span><span style="font-weight: bold; color: brown;">: </span>false
+&nbsp;
+<span style="color: blue;"># End of File &lt;-- No seriously, you're done with configuration.</span>
+&nbsp;</pre></td></tr></tbody></table></body>
+</html>                   

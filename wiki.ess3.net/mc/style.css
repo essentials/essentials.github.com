@@ -1,0 +1,156 @@
+  html {
+    height: 95%
+  }
+	body {
+    background:#111;
+    color:#fff;
+    height: 100%
+  }
+  h1 {
+	  text-align:center;
+    font-weight:700;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1.4em;
+    margin:0;
+  }
+  div.content {
+    margin: 0 auto;
+    text-align: center;
+    height: 95%;
+    width: 90%;
+  }
+  div.content ul li {
+    list-style: none;
+  }
+	.colours {
+    height: 60%;
+    min-height: 221px;
+       
+    padding:0 0 1% 5%;
+    -webkit-column-count: 2;
+    -webkit-column-gap: .2em;
+    -moz-column-count: 2;
+    -moz-column-gap: .2em;
+    column-count: 2;
+    column-gap: .2em;
+  }
+  .colours li {
+    margin:0.1em;
+    padding:0.2em;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    min-height: 20px;
+    height: 8%
+  }
+  @media screen and (min-height:550px) {
+    .colours {
+      height: 68%;
+    }
+    .colours li {
+      height: 9%;
+    }
+  }
+  @media screen and (min-height:820px) {
+    .colours {
+      height: 75%;
+      padding-bottom: 6%;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+    .colours li {
+      height: 5.8%;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .colours {
+      height: 70%;
+      padding-bottom: 7%;
+      min-height: 400px;
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }    
+   .colours li {
+      height: 5%
+    }
+  }
+	
+	.btxt {
+    background:#fff;
+    color:#000;
+    width:3em;
+    margin:0.1em auto;
+    min-height: 18px;
+    height: 90%;
+    line-height:1.0em;
+    font-size:1.3em;
+    font-family: Consolas,
+               "Courier New",
+               "Bitstream Vera Sans Mono",
+               "DejaVu Sans Mono",
+               monospace;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;               
+  }
+  
+  .format {
+    padding:0 0 0 5%;
+
+    -webkit-column-count: 2;
+    -webkit-column-gap: .2em;
+    -moz-column-count: 2;
+    -moz-column-gap: .2em;
+    column-count: 2;
+    column-gap: .2em;
+  }
+  @media screen and (max-width:600px) {
+    .format {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+	.format li {
+    margin:0.1em;
+    padding:0.2em;
+    display: inline-block;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    min-height: 20px;
+    height: 5%;
+    width: 98%;
+  }
+  .ctxt {
+    background:#fff;
+    color:#000;
+    min-width: 150px;
+    width:30%;    
+    margin:0.1em auto;
+    padding: 0.1em 2% 0.1em 10%;
+    min-height: 18px;
+    height: 90%;
+    line-height:1.0em;
+    text-align:left;
+    font-size:1.2em;   
+    font-family: Consolas,
+               "Courier New",
+               "Bitstream Vera Sans Mono",
+               "DejaVu Sans Mono",
+               monospace;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;                
+  }
+  a:active {
+    color:#FFFF00;
+  }
+  a:link {
+    color:#AAAAFF;
+  }
+  a:visited {
+    color:#AAAAAA;
+  }
