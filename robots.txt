@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /ess.khhq.net/
+Disallow: /wiki.ess3.net/
